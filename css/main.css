@@ -86,8 +86,7 @@ footer {
 }
 
 .cuadro-info-morado {
-    top: 654px;
-    left: 193px;
+    display: table;
     width: 88px;
     height: 88px;
     background: #8661DB 0% 0% no-repeat padding-box;
@@ -97,8 +96,7 @@ footer {
 }
 
 .cuadro-info-azul {
-    top: 787px;
-    left: 193px;
+    display: table;
     width: 88px;
     height: 88px;
     background: #61C8DB 0% 0% no-repeat padding-box;
@@ -108,8 +106,7 @@ footer {
 }
 
 .cuadro-info-verde {
-    top: 920px;
-    left: 193px;
+    display: table;
     width: 88px;
     height: 88px;
     background: #BADB61 0% 0% no-repeat padding-box;
@@ -119,8 +116,7 @@ footer {
 }
 
 .cuadro-info-amarillo {
-    top: 1053px;
-    left: 193px;
+    display: table;
     width: 88px;
     height: 88px;
     background: #D5C723 0% 0% no-repeat padding-box;
@@ -130,14 +126,118 @@ footer {
 }
 
 .cuadro-info-rojo {
-    top: 1186px;
-    left: 193px;
+    display: table;
     width: 88px;
     height: 88px;
     background: #DB6161 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 20px #00000029;
     border-radius: 20px;
     opacity: 1;
+}
+
+.cuadro-info-morado-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #8661DB 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-rosa-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #db61c8 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-verdeC-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #badb61 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-verde-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #38c764 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-rosaF-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #d80e5b 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-azulC-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #61c8db 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-azulF-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #0b70af 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-amarillo-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #d5c723 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-naranja-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #fa8f25 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-rojoS-lg {
+    display: table;
+    width: 120px;
+    height: 120px;
+    background: #db6161 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.cuadro-info-texto {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .centrar-paginacion {
@@ -357,6 +457,18 @@ footer {
     transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
 }
 
+#map {
+    width: 70%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+#coords {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -514,12 +626,16 @@ footer {
     opacity: 0.9;
 }
 
+.font-12 {
+    font-size: 12px;
+}
+
 .font-15 {
     font-size: 15px;
 }
 
-.font-12 {
-    font-size: 12px;
+.font-25 {
+    font-size: 25px;
 }
 
 .mr-5 {
@@ -553,6 +669,10 @@ footer {
     border: 0;
 }
 
+.espacio-top-100 {
+    margin-top: 100px;
+}
+
 .separacion-30 {
     padding: 0 30px 0 30px;
 }
@@ -573,6 +693,10 @@ footer {
 .border-r {
     border-right: 2px solid var(--gris);
     padding-right: 12px;
+}
+
+.border-b-w {
+    border-bottom: 2px solid #fff;
 }
 
 .outline {
@@ -763,6 +887,9 @@ footer {
     }
     footer {
         position: inherit;
+    }
+    .separacion-50 {
+        padding: 0px;
     }
 }
 
