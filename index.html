@@ -57,215 +57,219 @@
         <h6 class="text-center"><i class="fas fa-chart-line texto-naranja"></i> <b class="op-7">ORGANIZACIONES DE LA
                 SOCIEDAD CIVIL REGISTRADAS EN MÉXICO: 45,817</b></h6>
         <div class="contenedor-busqueda mt-5 pl-5 pr-5 pt-4 pb-3">
-            <div class="form-row">
-                <div class="form-group col-lg-3 col-md-4 border-r">
-                    <label for="inputEmail4" class="font-weight-bold op-9">Nombre</label>
-                    <input type="text" class="form-control-busqueda" id="inputEmail4"
-                        placeholder="Nombre de la organización">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-lg-3 col-md-4 border-r">
+                        <label for="inputEmail4" class="font-weight-bold op-9">Nombre</label>
+                        <input type="text" class="form-control-busqueda" id="inputEmail4"
+                            placeholder="Nombre de la organización">
+                    </div>
+                    <div class="form-group col-lg-3 col-md-4 border-r">
+                        <label for="inputPassword4" class="font-weight-bold op-9">RFC</label>
+                        <input type="text" class="form-control-busqueda" id="inputPassword4"
+                            placeholder="Registro Federal del Contribuyente">
+                    </div>
+                    <div class="form-group col-lg-2 col-md-4 border-r">
+                        <label for="inputPassword4" class="font-weight-bold op-9">Ubicación</label>
+                        <input type="text" class="form-control-busqueda" id="inputPassword4"
+                            placeholder="Edo., Alcaldía o mpio.">
+                    </div>
+                    <div class="form-group col-lg-3 col-md-4">
+                        <label for="inputPassword4" class="font-weight-bold op-9">Más criterios</label>
+                        <input type="text" class="form-control-busqueda" id="inputPassword4"
+                            placeholder="Más criterios de búsqueda">
+                    </div>
+                    <div class="contenedor-search">
+                        <a type="button" class="btn-search btn-search-blanco ml-2" data-toggle="modal"
+                            data-target="#exampleModal"><i class="fas fa-search"></i></a>
+                    </div>
                 </div>
-                <div class="form-group col-lg-3 col-md-4 border-r">
-                    <label for="inputPassword4" class="font-weight-bold op-9">RFC</label>
-                    <input type="text" class="form-control-busqueda" id="inputPassword4"
-                        placeholder="Registro Federal del Contribuyente">
-                </div>
-                <div class="form-group col-lg-2 col-md-4 border-r">
-                    <label for="inputPassword4" class="font-weight-bold op-9">Ubicación</label>
-                    <input type="text" class="form-control-busqueda" id="inputPassword4"
-                        placeholder="Edo., Alcaldía o mpio.">
-                </div>
-                <div class="form-group col-lg-3 col-md-4">
-                    <label for="inputPassword4" class="font-weight-bold op-9">Más criterios</label>
-                    <input type="text" class="form-control-busqueda" id="inputPassword4"
-                        placeholder="Más criterios de búsqueda">
-                </div>
-                <div class="contenedor-search">
-                    <a type="button" class="btn-search btn-search-blanco ml-2" data-toggle="modal"
-                        data-target="#exampleModal"><i class="fas fa-search"></i></a>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content modal-content-search">
-                                <div class="modal-header modal-header-search">
-                                    <button type="button" class="close close-search" data-dismiss="modal"
-                                        aria-label="Close">
-                                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                    </button>
-                                    <h5 class="modal-title text-center centrar font-weight-bold op-9"
-                                        id="exampleModalLabel">Más criterios de búsqueda</h5>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form>
-                                            <div class="form-row separacion-30">
-                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="font-weight-bold op-9">Siglas</label>
-                                                    <input type="text" class="form-control-modal" placeholder="">
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="font-weight-bold op-9">Figura jurídica</label>
-                                                    <select class="form-control-modal">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="font-weight-bold op-9">Naturaleza de la
-                                                        institución</label>
-                                                    <select class="form-control-modal">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="font-weight-bold op-9">Tipo de donante</label>
-                                                    <select class="form-control-modal">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="col-12 mt-4">
-                                                    <hr class="separacion">
-                                                </div>
-                                            </div>
-                                            <div class="form-row separacion-50">
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <div class="box-check">
-                                                        <input id="check1" type="checkbox" checked>
-                                                        <span class="check"></span>
-                                                        <label for="check1"
-                                                            class="op-9 font-15 font-weight-light ml-2">Forma parte
-                                                            del<br> Cemefi: Socio</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <div class="box-check">
-                                                        <input id="check2" type="checkbox">
-                                                        <span class="check"></span>
-                                                        <label for="check2"
-                                                            class="op-9 font-15 font-weight-light ml-2">Forma parte
-                                                            del<br> Cemefi: Afiliado</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <div class="box-check">
-                                                        <input id="check3" type="checkbox">
-                                                        <span class="check"></span>
-                                                        <label for="check3"
-                                                            class="op-9 font-15 font-weight-light ml-2">No forma parte
-                                                            <br>del Cemefi</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <div class="box-check">
-                                                        <input id="check4" type="checkbox">
-                                                        <span class="check"></span>
-                                                        <label for="check4"
-                                                            class="op-9 font-15 font-weight-light ml-2">Donataria
-                                                            autorizada</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <div class="box-check">
-                                                        <input id="check5" type="checkbox">
-                                                        <span class="check"></span>
-                                                        <label for="check5"
-                                                            class="op-9 font-15 font-weight-light ml-2">Cuenta con
-                                                            Cluni</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <div class="box-check">
-                                                        <input id="check6" type="checkbox">
-                                                        <span class="check"></span>
-                                                        <label for="check6"
-                                                            class="op-9 font-15 font-weight-light ml-2">Acreditación en
-                                                            Institucionalidad <br>y Transparencia (AIT)</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="col-12 mt-4">
-                                                    <hr class="separacion">
-                                                </div>
-                                                <div class="col-12">
-                                                    <p>Temática de acción</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-row separacion-80">
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">1.-Arte y
-                                                        cultura</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">2.-Asistencia social y
-                                                        atención a desastres</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">3.-Deporte y
-                                                        recreación</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">4.- Derechos humanos y
-                                                        civiles</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">5.-Desarrollo social y
-                                                        económico</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">6.-Educación</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">7.-Filantropia y
-                                                        voluntariado</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">8.-
-                                                        Investigación</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">9.- Medio ambiente y
-                                                        protección civil</label>
-                                                    <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </form>
+            </form>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content modal-content-search">
+                        <div class="modal-header modal-header-search">
+                            <button type="button" class="close close-search" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                            </button>
+                            <h5 class="modal-title text-center centrar font-weight-bold op-9" id="exampleModalLabel">Más
+                                criterios
+                                de búsqueda</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <form>
+                                    <div class="form-row separacion-30">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="font-weight-bold op-9">Siglas</label>
+                                            <input type="text" class="form-control-modal" placeholder="">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="font-weight-bold op-9">Figura jurídica</label>
+                                            <select class="form-control-modal">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="font-weight-bold op-9">Naturaleza de la
+                                                institución</label>
+                                            <select class="form-control-modal">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="font-weight-bold op-9">Tipo de donante</label>
+                                            <select class="form-control-modal">
+                                                <option></option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="resultados_busqueda.html" type="button"
-                                        class="btn btn-search-orange text-white op-9">Mostrar resultados</a>
-                                </div>
+                                    <div class="form-row">
+                                        <div class="col-12 mt-4">
+                                            <hr class="separacion">
+                                        </div>
+                                    </div>
+                                    <div class="form-row separacion-50">
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <div class="box-check">
+                                                <input id="check1" type="checkbox" checked>
+                                                <span class="check"></span>
+                                                <label for="check1" class="op-9 font-15 font-weight-light ml-2">Forma
+                                                    parte
+                                                    del<br> Cemefi: Socio</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <div class="box-check">
+                                                <input id="check2" type="checkbox">
+                                                <span class="check"></span>
+                                                <label for="check2" class="op-9 font-15 font-weight-light ml-2">Forma
+                                                    parte
+                                                    del<br> Cemefi: Afiliado</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <div class="box-check">
+                                                <input id="check3" type="checkbox">
+                                                <span class="check"></span>
+                                                <label for="check3" class="op-9 font-15 font-weight-light ml-2">No
+                                                    forma parte
+                                                    <br>del Cemefi</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <div class="box-check">
+                                                <input id="check4" type="checkbox">
+                                                <span class="check"></span>
+                                                <label for="check4"
+                                                    class="op-9 font-15 font-weight-light ml-2">Donataria
+                                                    autorizada</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <div class="box-check">
+                                                <input id="check5" type="checkbox">
+                                                <span class="check"></span>
+                                                <label for="check5" class="op-9 font-15 font-weight-light ml-2">Cuenta
+                                                    con
+                                                    Cluni</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <div class="box-check">
+                                                <input id="check6" type="checkbox">
+                                                <span class="check"></span>
+                                                <label for="check6"
+                                                    class="op-9 font-15 font-weight-light ml-2">Acreditación en
+                                                    Institucionalidad <br>y Transparencia (AIT)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-12 mt-4">
+                                            <hr class="separacion">
+                                        </div>
+                                        <div class="col-12">
+                                            <p>Temática de acción</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-row separacion-80">
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">1.-Arte y
+                                                cultura</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">2.-Asistencia social y
+                                                atención a desastres</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">3.-Deporte y
+                                                recreación</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">4.- Derechos humanos y
+                                                civiles</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">5.-Desarrollo social y
+                                                económico</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">6.-Educación</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">7.-Filantropia y
+                                                voluntariado</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">8.-
+                                                Investigación</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                            <label for="" class="altura-40 font-12 op-9">9.- Medio ambiente y
+                                                protección civil</label>
+                                            <select class="form-control-modal-sm">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="resultados_busqueda.html" type="button"
+                                class="btn btn-search-orange text-white op-9">Mostrar
+                                resultados</a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="espacio-50"></div>
         <p class="mt-5 text-center font-12 op-7 mr-5">Si su organización no aparece en este directorio, le invitamos a
