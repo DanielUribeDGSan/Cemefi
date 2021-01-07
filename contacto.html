@@ -31,7 +31,6 @@
 
 <body>
     <div class="d-flex toggled" id="wrapper">
-
         <!-- Sidebar -->
         <div class="border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">Start Bootstrap </div>
@@ -43,13 +42,11 @@
                 <a href="#" class="list-group-item list-group-item-action text-white">Overview</a>
                 <a href="#" class="list-group-item list-group-item-action text-white">Events</a>
                 <a href="#" class="list-group-item list-group-item-action text-white">Profile</a>
-                <a href="#" class="list-group-item list-group-item-action text-white">Status</a>
+                <a href="#" class="list-group-item list-group-item-action text-white" id="close-menu">Cerrar menu</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
-
         <div id="page-content-wrapper">
-
             <header id="header" class="container-fluid ">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -88,66 +85,68 @@
                 </div>
             </header>
             <div class="container mt-5">
-                <a href="./" class="btn texto-naranja"><i class="fas fa-arrow-left"></i> Regresar</a>
+                <a href="./" class="btn texto-naranja"><i class="fas fa-arrow-left"></i> REGRESAR</a>
                 <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-12">
-                        <h1 class="mt-2">Resultados de búsqueda</h1>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 text-right">
-                        <button class="btn btn-blanco-sm mr-1"><i class="fas fa-chevron-left"></i></button>
-                        <button class="btn btn-blanco-sm"><i class="fas fa-chevron-right"></i></button>
+                        <h1 class="mt-2">Contacto</h1>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <p class="texto-gris">Se encontraron 40 resultados</p>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-12 text-right mt-2">
-                        <button class="btn btn-blanco-lg mr-1 pl-4 pr-4 pt-2 pb-2"><i class="fas fa-list-ul"></i>
-                            Lista</button>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p class="texto-gris font-15">LOS CAMPOS MARCADIS CON * SON OBLIGATORIOS</p>
                     </div>
                 </div>
-                <h4 class="text-center op-9 my-5 mt-2">Desplegado de resultados en mapa</h4>
-                <div class="centrar" id="map"></div>
-                <div class="table-responsive mt-5">
-                    <table class="table table-borderless">
-                        <thead>
-                            <th></th>
-                            <th>Razón social</th>
-                            <th>Ubicación</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>
-                            <th>Correo electrónico</th>
-                        </thead>
-                        <hr>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="cuadro-info-azul">
-                                        <p class="text-white texto-chico text-center cuadro-info-texto p-2">Arte y
-                                            cultura
-                                        </p>
+                <div class="row">
+                    <div class="col-lg-12 separacion-70 mt-5 contacto-col">
+                        <div class="card sombra boder-none">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row separacion-50">
+                                        <div class="form-group col-lg-12 col-md-12">
+                                            <label for="asunto"><span class="form-label-g">Asunto</span>
+                                                <span class="text-warning">*</span></label>
+                                            <select class="form-control-select-lg border-rad-10 boder-s-g" id="asunto"
+                                                name="asunto">
+                                                <option value="0" selected disabled>Selecciona una opción</option>
+                                                <option value="valor 1">Valor 1</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-lg-12 col-md-12">
+                                            <label for="correoC"><span class="form-label-g">Correo de contacto</span>
+                                                <span class="text-warning">*</span></label>
+                                            <input type="email" class="form-control-busqueda" id="correoC"
+                                                name="correoC" placeholder="ejemplo@mail.com">
+                                        </div>
+                                        <div class="col-12 mt-i-15">
+                                            <hr class="separacion2">
+                                        </div>
+                                        <div class="form-group col-lg-12 col-md-12">
+                                            <label for="nombre"><span class="form-label-g">Nombre completo</span>
+                                                <span class="text-warning">*</span></label>
+                                            <input type="text" class="form-control-busqueda" id="nombre" name="nombre"
+                                                placeholder="Fernanda Estrada">
+                                        </div>
+                                        <div class="col-12 mt-i-15">
+                                            <hr class="separacion2">
+                                        </div>
+                                        <div class="form-group col-lg-12 col-md-12">
+                                            <label for="mensaje"><span class="form-label-g">Describe brevemente por qué
+                                                    deseas
+                                                    ponerte en contacto con nosotros</span>
+                                            </label>
+                                            <textarea class="form-control border-rad-10 boder-s-g" rows="4" id="mensaje"
+                                                name="mensaje"></textarea>
+                                        </div>
                                     </div>
-                                </td>
-                                <td class="pt-4 text-left">
-                                    <small>Banco de Alimentos de Caritas de Mexicali</small>
-                                </td>
-                                <td class="pt-4 text-left">
-                                    <small>Ensenada Baja California</small>
-                                </td>
-                                <td class="pt-4 text-left">
-                                    <small>Morelos 164 Primera Sección, Mercado Braulio Maldonado Mexicali</small>
-                                </td>
-                                <td class="pt-4 text-left">
-                                    <small>(55) 57142243 (55) 57142244</small>
-                                </td>
-                                <td class="pt-4 text-left">
-                                    <small>contacto@bancodealimentos.com soporte@bancodealimentos.com</small>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                </form>
+                                <button type="button" class="btn btn-orange-c float-right mb-i" id="nextForm1"
+                                    onclick="validarFormContacto()"><i class="fas fa-long-arrow-alt-right"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <footer class="mt-5">
                 <div class="caja">
@@ -163,7 +162,6 @@
             </footer>
         </div>
     </div>
-
 </body>
 
 <!-- JS boostrap -->

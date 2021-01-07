@@ -1,3 +1,8 @@
+function validar_email(email) {
+  var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email) ? true : false;
+}
+
 const formRegistro = () => {
   Swal.fire({
     title: "Tu organización ya está registrada",
@@ -278,4 +283,140 @@ const cambiarFormulario = (form) => {
     });
     // Aquí es donde se haría el submit con js al formulario con su id
   }
+};
+
+const validarFormContacto = () => {
+  const asunto = document.getElementById("asunto").value;
+  const correo = document.getElementById("correoC").value;
+  const nombre = document.getElementById("nombre").value;
+  const mensaje = document.getElementById("mensaje").value;
+
+  if (asunto == "0") {
+    Swal.fire({
+      title: "Campo vacío.",
+      icon: "warning",
+      html: 'El campo <b>"Asunto"</b> no puede quedar vacío',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  } else if (correo == "") {
+    Swal.fire({
+      title: "Campo vacío.",
+      icon: "warning",
+      html: 'El campo <b>"Correo de contacto"</b> no puede quedar vacío',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  } else if (!validar_email(correo)) {
+    Swal.fire({
+      title: "Correo no valido.",
+      icon: "warning",
+      html: "Escribe correctamente tu correo electrónico.",
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  } else if (nombre == "") {
+    Swal.fire({
+      title: "Campo vacío.",
+      icon: "warning",
+      html: 'El campo <b>"Nombre completo"</b> no puede quedar vacío',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  }
+  Swal.fire({
+    title: "Pronto nos pondremos en contacto",
+    html:
+      '<img src="./img/alert-r.png" alt="logo cemefi" width="100px"><br>' +
+      '<p class="font-12 op-7">¡Gracias por ponerte en contacto con nosotros! En breve responderemos a sus inquietudes</p> ',
+    showCloseButton: true,
+    showCancelButton: false,
+    focusConfirm: false,
+    confirmButtonText: "Volver al directorio",
+    confirmButtonAriaLabel: "Thumbs up, great!",
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    location.href = "/cemefi";
+  });
+  // submit del form va aquí
+};
+
+const validarFormLogin = () => {
+  const usuario = document.getElementById("usuario").value;
+  const contrasena = document.getElementById("contrasena").value;
+
+  if (usuario == "") {
+    Swal.fire({
+      title: "Campo vacío.",
+      icon: "warning",
+      html: 'El campo <b>"Usuario"</b> no puede quedar vacío',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  } else if (contrasena == "") {
+    Swal.fire({
+      title: "Campo vacío.",
+      icon: "warning",
+      html: 'El campo <b>"Contraseña"</b> no puede quedar vacío',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  }
+  // submit del form va aquí
+};
+
+const validarFormRestablecer = () => {
+  const usuario = document.getElementById("usuario-r").value;
+  const contrasena = document.getElementById("contrasena-r").value;
+
+  if (usuario == "") {
+    Swal.fire({
+      title: "Campo vacío.",
+      icon: "warning",
+      html: 'El campo <b>"Usuario"</b> no puede quedar vacío',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  } else if (contrasena == "") {
+    Swal.fire({
+      title: "Campo vacío.",
+      icon: "warning",
+      html: 'El campo <b>"Contraseña"</b> no puede quedar vacío',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  }
+  // submit del form va aquí
 };

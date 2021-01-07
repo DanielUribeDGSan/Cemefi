@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMEFI</title>
+    <link rel="icon" type="image/png" href="./img/icono-cemefi.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="./css/main.css?ver=1.0.0">
+
+    <!-- Google Map -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhpy_QS2Idi5MsBff1UDtlhQysstePASE&callback=initMap&libraries=&v=weekly"
+        defer></script>
+
+    <!-- Mostrar mapa -->
+    <script src="./js/map.js?ver=1.0.0"></script>
+
+    <!-- Sidebar -->
+    <link href="./css/simple-sidebar.css?ver=1.0.0" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="d-flex toggled" id="wrapper">
+        <!-- Sidebar -->
+        <div class="border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Start Bootstrap </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action text-white"><i
+                        class="fas fa-angle-double-left font-25"></i>
+                    <span class="border-b-w">Dashboard</span></a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Shortcuts</a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Overview</a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Events</a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Profile</a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Status</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <div id="page-content-wrapper">
+            <header id="header" class="container-fluid ">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <a class="navbar-brand" href="#"><img src="./img/logocemefi.png" alt="logo cemefi"
+                                width="130px"></a>
+                        <a class="navbar-toggler" id="menu-toggle">
+                            <span class="navbar-toggler-icon"></span>
+                        </a>
+                        <div class="collapse navbar-collapse ml-lg-4 mt-md-3" id="navbarNavDropdown">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="registro.html">Registro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="estadisticas.html">Estadística</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="iniciar-sesion.html">Sesión</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline">
+                                <div class="box">
+                                    <div class="container-1">
+                                        <span class="icon"><i class="fa fa-search"></i></span>
+                                        <input class="outline" type="search" id="search"
+                                            placeholder="Inserte alguna palabra o frase que desee buscar en los campos" />
+                                    </div>
+                                </div>
+                            </form>
+                            <a href="contacto.html" class="btn btn-orange ml-2"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="container mt-5">
+                <div class="espacio-50"></div>
+                <div class="row centrar-f">
+                    <div class="col-lg-5 col-md-6 col-sm-12 text-center">
+                        <div class="card-login boder-none ">
+                            <div class="card-body card-body-login text-center">
+                                <div class="mb-i-120 titulo-card-login">
+                                    <h2 class="text-white">BIENVENIDOS</h2><br>
+                                </div>
+                                <div class="">
+                                    <p class="text-white text-left">El Directorio de Instituciones Filantrópicas es la
+                                        más
+                                        importante
+                                        herramienta
+                                        para promover el acercamiento de todos
+                                        los sectores con las Organizaciones
+                                        de la sociedad Civil en México. Entre más actualizada y completa sea
+                                        la información de su organización,
+                                        mayor será el acercamiento y
+                                        vinculación de la institución con
+                                        el público.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <div class="espacio-30"></div>
+                        <div class="card sombra border-rad-20 boder-none ">
+                            <div class="card-body text-center">
+                                <div class="espacio-50"></div>
+                                <img class="img-fluid" src="./img/logocemefi.png" alt="logo cemefi" width="40%">
+                                <form>
+                                    <div class="form-row separacion-10 mt-5">
+                                        <div class="form-group col-lg-12 col-md-12 text-left">
+                                            <label for="usuario"><span class="form-label-g">Usuario</span>
+                                                <span class="text-warning">*</span></label>
+                                            <input type="text" class="form-control-login mt-i" id="usuario"
+                                                name="usuario">
+                                        </div>
+                                        <div class="form-group col-lg-12 col-md-12 text-left">
+                                            <label for="contrasena"><span class="form-label-g">Contraseña</span>
+                                                <span class="text-warning">*</span></label>
+                                            <input type="password" class="form-control-login mt-i" id="contrasena"
+                                                name="contrasena">
+                                        </div>
+                                        <div class="form-group col-lg-7 col-md-6 text-left">
+                                            <div class="box-check">
+                                                <input id="check1" type="checkbox">
+                                                <span class="check-sm"></span>
+                                                <label for="check1" class=" font-15 font-weight-light ml-2">Mantenerme
+                                                    conectado</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-5 col-md-6 ">
+                                            <a href="" data-toggle="modal" data-target="#exampleModal">Olvide mi
+                                                contraseña</a>
+                                        </div>
+                                        <a class="btn btn-orange-exl btn-block" onclick="validarFormLogin()">Iniciar
+                                            sesión</a>
+
+                                    </div>
+                                </form>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg modal-lg-login" role="document">
+                                        <div class="modal-content modal-content-login">
+                                            <div class="modal-header modal-header-login boder-none">
+                                                <h2 class="modal-title text-center centrar font-weight-bold op-7 pl-4"
+                                                    id="exampleModalLabel">Recuperar contraseña</h2>
+                                                <button type="button" class="close close-login" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                                </button>
+
+                                            </div>
+                                            <div class="modal-body mt-i-15">
+                                                <div class="container">
+                                                    <form>
+                                                        <div class="form-row separacion-40">
+                                                            <div class="col-lg-8 centrar text-center">
+                                                                <p class="text-center op-7">Proporciona tu usuario
+                                                                    y un
+                                                                    correo
+                                                                    electrónico para
+                                                                    recuperar su contraseña.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row separacion-100 mt-5">
+                                                            <div class="form-group col-lg-12 col-md-12 text-left">
+                                                                <label for="usuario-r"><span
+                                                                        class="form-label-g">Usuario</span>
+                                                                </label>
+                                                                <input type="text" class="form-control-login mt-i"
+                                                                    id="usuario-r" name="usuario-r">
+                                                            </div>
+                                                            <div class="form-group col-lg-12 col-md-12 text-left">
+                                                                <label for="contrasena-r"><span
+                                                                        class="form-label-g">Contraseña</span>
+                                                                </label>
+                                                                <input type="password" class="form-control-login mt-i"
+                                                                    id="contrasena-r" name="contrasena-r">
+                                                            </div>
+                                                            <a class="btn btn-orange-exl btn-block"
+                                                                onclick="validarFormRestablecer()">Recuperar
+                                                                contraseña</a>
+
+                                                    </form>
+                                                </div>
+                                                <div class="espacio-50"></div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="espacio-50"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="mt-5">
+            <div class="caja">
+                <img class="img-fluid" src="./img/olas-naranjas.png" alt="olas naranjas">
+                <a class="text-white texto-footer1" href="">Aviso de privacidad</a><br>
+                <a class="text-white texto-footer2" href="">Preguntas frecuentes</a>
+                <p class="text-white texto-footer3">© Cemefi
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                </p>
+            </div>
+        </footer>
+    </div>
+    </div>
+</body>
+
+<!-- JS boostrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+<!-- Menu Toggle Script -->
+<script src="./js/sidebar.js"></script>
+
+<!-- Validar formularios -->
+<script src="./js/validarFormularios.js"></script>
+
+</html>

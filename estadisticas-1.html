@@ -5,546 +5,608 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEMEFI</title>
+    <link rel="icon" type="image/png" href="./img/icono-cemefi.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="./css/main.css?ver=1.0.0">
+
+    <!-- Google Map -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhpy_QS2Idi5MsBff1UDtlhQysstePASE&callback=initMap&libraries=&v=weekly"
+        defer></script>
+
+    <!-- Mostrar mapa -->
+    <script src="./js/map.js?ver=1.0.0"></script>
+
+    <!-- Sidebar -->
+    <link href="./css/simple-sidebar.css?ver=1.0.0" rel="stylesheet">
 
 </head>
 
 <body>
-    <header id="header" class="container-fluid ">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <a class="navbar-brand" href="#"><img src="./img/logocemefi.png" alt="logo cemefi" width="130px"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse ml-lg-4 mt-md-3" id="navbarNavDropdown">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="registro.html">Registro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="estadisticas.html">Estadística</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="iniciar-sesion.html">Sesión</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline">
-                        <div class="box">
-                            <div class="container-1">
-                                <span class="icon"><i class="fa fa-search"></i></span>
-                                <input class="outline" type="search" id="search"
-                                    placeholder="Inserte alguna palabra o frase que desee buscar en los campos" />
-                            </div>
-                        </div>
-                    </form>
-                    <button type="button" class="btn btn-orange ml-2"><i class="far fa-envelope"></i></button>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <div class="container mt-5">
-        <a href="./" class="btn texto-naranja"><i class="fas fa-arrow-left"></i> REGRESAR</a>
-        <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12">
-                <h1 class="mt-2">Estadísticas</h1>
+    <div class="d-flex toggled" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Start Bootstrap </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action text-white"><i
+                        class="fas fa-angle-double-left font-25"></i>
+                    <span class="border-b-w">Dashboard</span></a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Shortcuts</a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Overview</a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Events</a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Profile</a>
+                <a href="#" class="list-group-item list-group-item-action text-white">Status</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-5 col-md-4 col-sm-12">
-                <p class="texto-gris font-15">NÚMERO DE ORGANIZACIONES POR ESTADO Y NACIONAL</p>
-            </div>
-            <div class="col-lg-7 col-md-8 col-sm-12 acomodar-botones mt-2">
-                <button class="btn btn-verde-lg mr-1 pl-4 pr-4 pt-2 pb-2"><i class="far fa-file-excel"></i>
-                    Descargar</button>
-                <button class="btn btn-rojo-lg mr-1 pl-4 pr-4 pt-2 pb-2"><i class="far fa-file-pdf"></i>
-                    Descargar</button>
-            </div>
-        </div>
-        <div class="contenedor">
-            <div class="fila">
-                <div class="row mt-5">
-                    <div class="col-lg-12 col-md-12 col-sm-12 ">
-                        <p class="font-17 pl-2">VARIABLES</p>
-                        <div class="card sombra border-rad-20 boder-none">
-                            <div class="card-body">
-                                <a class="float-right font-25 color-n pointer"><i class="fas fa-chevron-up"></i></a>
-                                <form>
-                                    <div class="form-row separacion-30">
-                                        <div class="form-group col-lg-12 col-md-12 mt-5">
-                                            <label for="donatorias"
-                                                class="font-weight-bold op-9 font-13 mb-i pl-2">Donatorias
-                                                autorizadas</label>
-                                            <select class="form-control-select-lg sombra" name="donatorias"
-                                                id="donatorias">
-                                                <option>Selecciona una opción</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12 mt-1">
-                                            <label for="cluni"
-                                                class="font-weight-bold op-9 font-13 mb-i pl-2">Cluni</label>
-                                            <select class="form-control-select-lg sombra" name="cluni" id="cluni">
-                                                <option>Selecciona una opción</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12 mt-1">
-                                            <label for="figuraJ" class="font-weight-bold op-9 font-13 mb-i pl-2">Figura
-                                                Juridica</label>
-                                            <select class="form-control-select-lg sombra" name="figuraJ" id="figuraJ">
-                                                <option>Selecciona una opción</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12 mt-1">
-                                            <label for="campoA" class="font-weight-bold op-9 font-13 mb-i pl-2">Campo de
-                                                acción</label>
-                                            <select class="form-control-select-lg sombra" name="campoA" id="campoA">
-                                                <option>Selecciona una opción</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12 mt-1">
-                                            <label for="subCampoA"
-                                                class="font-weight-bold op-9 font-13 mb-i pl-2">Subcampo de
-                                                acción</label>
-                                            <select class="form-control-select-lg sombra" name="subCampoA"
-                                                id="subCampoA">
-                                                <option>Selecciona una opción</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12 mt-1">
-                                            <label for="estados"
-                                                class="font-weight-bold op-9 font-13 mb-i pl-2">Estados</label>
-                                            <select class="form-control-select-lg sombra" name="estados" id="estados">
-                                                <option>Selecciona una opción</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12 mt-1 text-center">
-                                            <a class="btn btn-orange-exl btn-block">Desplegar resultados</a>
-                                        </div>
+        <!-- /#sidebar-wrapper -->
+        <div id="page-content-wrapper">
+            <header id="header" class="container-fluid ">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <a class="navbar-brand" href="#"><img src="./img/logocemefi.png" alt="logo cemefi"
+                                width="130px"></a>
+                        <a class="navbar-toggler" id="menu-toggle">
+                            <span class="navbar-toggler-icon"></span>
+                        </a>
+                        <div class="collapse navbar-collapse ml-lg-4 mt-md-3" id="navbarNavDropdown">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="registro.html">Registro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="estadisticas.html">Estadística</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="iniciar-sesion.html">Sesión</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline">
+                                <div class="box">
+                                    <div class="container-1">
+                                        <span class="icon"><i class="fa fa-search"></i></span>
+                                        <input class="outline" type="search" id="search"
+                                            placeholder="Inserte alguna palabra o frase que desee buscar en los campos" />
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+                            </form>
+                            <a href="contacto.html" class="btn btn-orange ml-2"><i class="far fa-envelope"></i></a>
                         </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="container mt-5">
+                <a href="./" class="btn texto-naranja"><i class="fas fa-arrow-left"></i> REGRESAR</a>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <h1 class="mt-2">Estadísticas</h1>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
-                        <p class="font-17 pl-2">GRÁFICO</p>
-                        <div class="card sombra border-rad-20">
-                            <div class="card-body">
-                                <a class="float-right font-25 color-n pointer"><i class="fas fa-chevron-up"></i></a>
-                                <div class="form-row">
-                                    <div class="form-group col-lg-6 col-md-12 mt-5 centrar-f">
-                                        <div class="card sombra border-rad-20 w-60 bg-orange boder-none">
-                                            <a class="text-white" href="">
-                                                <div class="card-body text-center font-60">
-                                                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-4 col-sm-12">
+                        <p class="texto-gris font-15">NÚMERO DE ORGANIZACIONES POR ESTADO Y NACIONAL</p>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-12 acomodar-botones mt-2">
+                        <button class="btn btn-verde-lg mr-1 pl-4 pr-4 pt-2 pb-2"><i class="far fa-file-excel"></i>
+                            Descargar</button>
+                        <button class="btn btn-rojo-lg mr-1 pl-4 pr-4 pt-2 pb-2"><i class="far fa-file-pdf"></i>
+                            Descargar</button>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="fila">
+                        <div class="row mt-5">
+                            <div class="col-lg-12 col-md-12 col-sm-12 ">
+                                <p class="font-17 pl-2">VARIABLES</p>
+                                <div class="card sombra border-rad-20 boder-none">
+                                    <div class="card-body">
+                                        <a class="float-right font-25 color-n pointer"><i
+                                                class="fas fa-chevron-up"></i></a>
+                                        <form>
+                                            <div class="form-row separacion-30">
+                                                <div class="form-group col-lg-12 col-md-12 mt-5">
+                                                    <label for="donatorias"
+                                                        class="font-weight-bold op-9 font-13 mb-i pl-2">Donatorias
+                                                        autorizadas</label>
+                                                    <select class="form-control-select-lg sombra" name="donatorias"
+                                                        id="donatorias">
+                                                        <option>Selecciona una opción</option>
+                                                    </select>
                                                 </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-6 col-md-12 mt-5 centrar-f">
-                                        <div class="card sombra border-rad-20 w-60 bg-gris boder-none">
-                                            <a class="text-white" href="">
-                                                <div class="card-body text-center font-60">
-                                                    <i class="fas fa-chart-pie"></i>
+                                                <div class="form-group col-lg-12 col-md-12 mt-1">
+                                                    <label for="cluni"
+                                                        class="font-weight-bold op-9 font-13 mb-i pl-2">Cluni</label>
+                                                    <select class="form-control-select-lg sombra" name="cluni"
+                                                        id="cluni">
+                                                        <option>Selecciona una opción</option>
+                                                    </select>
                                                 </div>
-                                            </a>
+                                                <div class="form-group col-lg-12 col-md-12 mt-1">
+                                                    <label for="figuraJ"
+                                                        class="font-weight-bold op-9 font-13 mb-i pl-2">Figura
+                                                        Juridica</label>
+                                                    <select class="form-control-select-lg sombra" name="figuraJ"
+                                                        id="figuraJ">
+                                                        <option>Selecciona una opción</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12 mt-1">
+                                                    <label for="campoA"
+                                                        class="font-weight-bold op-9 font-13 mb-i pl-2">Campo de
+                                                        acción</label>
+                                                    <select class="form-control-select-lg sombra" name="campoA"
+                                                        id="campoA">
+                                                        <option>Selecciona una opción</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12 mt-1">
+                                                    <label for="subCampoA"
+                                                        class="font-weight-bold op-9 font-13 mb-i pl-2">Subcampo de
+                                                        acción</label>
+                                                    <select class="form-control-select-lg sombra" name="subCampoA"
+                                                        id="subCampoA">
+                                                        <option>Selecciona una opción</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12 mt-1">
+                                                    <label for="estados"
+                                                        class="font-weight-bold op-9 font-13 mb-i pl-2">Estados</label>
+                                                    <select class="form-control-select-lg sombra" name="estados"
+                                                        id="estados">
+                                                        <option>Selecciona una opción</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12 mt-1 text-center">
+                                                    <a class="btn btn-orange-exl btn-block">Desplegar resultados</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+                                <p class="font-17 pl-2">GRÁFICO</p>
+                                <div class="card sombra border-rad-20">
+                                    <div class="card-body">
+                                        <a class="float-right font-25 color-n pointer"><i
+                                                class="fas fa-chevron-up"></i></a>
+                                        <div class="form-row">
+                                            <div class="form-group col-lg-6 col-md-12 mt-5 centrar-f">
+                                                <div class="card sombra border-rad-20 w-60 bg-orange boder-none">
+                                                    <a class="text-white" href="">
+                                                        <div class="card-body text-center font-60">
+                                                            <i class="fas fa-chart-bar"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-lg-6 col-md-12 mt-5 centrar-f">
+                                                <div class="card sombra border-rad-20 w-60 bg-gris boder-none">
+                                                    <a class="text-white" href="">
+                                                        <div class="card-body text-center font-60">
+                                                            <i class="fas fa-chart-pie"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+                                <p class="font-17 pl-2">ALTERNATIVA 1</p>
+                                <div class="card sombra border-rad-20 boder-none">
+                                    <div class="card-body">
+                                        <a class="float-right font-25 color-n pointer"><i
+                                                class="fas fa-chevron-up"></i></a>
+                                        <form>
+                                            <div class="form-row separacion-30">
+                                                <div class="form-group col-lg-12 col-md-12 mt-5">
+                                                    <div class="box-check">
+                                                        <input id="check1" type="checkbox">
+                                                        <span class="check"></span>
+                                                        <label for="check1"
+                                                            class=" font-15 font-weight-light ml-2">Variable
+                                                            1</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12">
+                                                    <div class="box-check">
+                                                        <input id="check2" type="checkbox">
+                                                        <span class="check"></span>
+                                                        <label for="check2"
+                                                            class=" font-15 font-weight-light ml-2">Variable
+                                                            2</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12">
+                                                    <div class="box-check">
+                                                        <input id="check3" type="checkbox">
+                                                        <span class="check"></span>
+                                                        <label for="check3"
+                                                            class=" font-15 font-weight-light ml-2">Variable
+                                                            3</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12">
+                                                    <div class="box-check">
+                                                        <input id="check4" type="checkbox">
+                                                        <span class="check"></span>
+                                                        <label for="check4"
+                                                            class=" font-15 font-weight-light ml-2">Variable
+                                                            4</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
-                        <p class="font-17 pl-2">ALTERNATIVA 1</p>
-                        <div class="card sombra border-rad-20 boder-none">
-                            <div class="card-body">
-                                <a class="float-right font-25 color-n pointer"><i class="fas fa-chevron-up"></i></a>
-                                <form>
-                                    <div class="form-row separacion-30">
-                                        <div class="form-group col-lg-12 col-md-12 mt-5">
-                                            <div class="box-check">
-                                                <input id="check1" type="checkbox">
-                                                <span class="check"></span>
-                                                <label for="check1" class=" font-15 font-weight-light ml-2">Variable
-                                                    1</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12">
-                                            <div class="box-check">
-                                                <input id="check2" type="checkbox">
-                                                <span class="check"></span>
-                                                <label for="check2" class=" font-15 font-weight-light ml-2">Variable
-                                                    2</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12">
-                                            <div class="box-check">
-                                                <input id="check3" type="checkbox">
-                                                <span class="check"></span>
-                                                <label for="check3" class=" font-15 font-weight-light ml-2">Variable
-                                                    3</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12">
-                                            <div class="box-check">
-                                                <input id="check4" type="checkbox">
-                                                <span class="check"></span>
-                                                <label for="check4" class=" font-15 font-weight-light ml-2">Variable
-                                                    4</label>
-                                            </div>
+                    <div class="fila ml-5 fila-derecha">
+                        <div class="row mt-5">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-row separacion-30">
+                                    <div class="form-group col-lg-2 col-md-12 mt-5">
+                                        <div class="cuadro-info-morado-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="form-group col-lg-10 col-md-12 mt-5">
+                                        <p class="mb-1">Aguascalientes</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 70%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">483</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-azul-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Baja california</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 80%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">1497</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-verde-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Campeche</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 50%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">290</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-morado-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Aguascalientes</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 70%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">483</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-azul-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Baja california</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 80%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">1497</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-verde-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Campeche</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 50%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">290</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-morado-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Aguascalientes</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 70%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">483</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-azul-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Baja california</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 80%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">1497</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-verde-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Campeche</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 50%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">290</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-morado-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Aguascalientes</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 70%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">483</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-azul-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Baja california</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 80%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">1497</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-verde-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Campeche</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 50%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">290</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-morado-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Aguascalientes</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 70%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">483</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-azul-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Baja california</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 80%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">1497</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-verde-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Campeche</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 50%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">290</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-morado-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Aguascalientes</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 70%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">483</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-azul-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Baja california</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 80%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">1497</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-verde-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Campeche</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 50%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">290</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-morado-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Aguascalientes</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 70%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">483</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-azul-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Baja california</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 80%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">1497</p>
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-12">
+                                        <div class="cuadro-info-verde-sm">
+                                            <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
+                                                    class="fas fa-globe-americas"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-10 col-md-12">
+                                        <p class="mb-1">Campeche</p>
+                                        <div class="progress-orange ml-3">
+                                            <div class="progress-bar-orange" role="progressbar" style="width: 50%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="font-13 float-right">290</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="fila ml-5 fila-derecha">
-                <div class="row mt-5">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="form-row separacion-30">
-                            <div class="form-group col-lg-2 col-md-12 mt-5">
-                                <div class="cuadro-info-morado-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12 mt-5">
-                                <p class="mb-1">Aguascalientes</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 70%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">483</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-azul-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Baja california</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 80%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">1497</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-verde-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Campeche</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 50%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">290</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-morado-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Aguascalientes</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 70%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">483</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-azul-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Baja california</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 80%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">1497</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-verde-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Campeche</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 50%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">290</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-morado-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Aguascalientes</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 70%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">483</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-azul-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Baja california</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 80%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">1497</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-verde-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Campeche</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 50%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">290</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-morado-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Aguascalientes</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 70%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">483</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-azul-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Baja california</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 80%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">1497</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-verde-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Campeche</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 50%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">290</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-morado-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Aguascalientes</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 70%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">483</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-azul-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Baja california</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 80%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">1497</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-verde-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Campeche</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 50%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">290</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-morado-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Aguascalientes</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 70%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">483</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-azul-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Baja california</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 80%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">1497</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-verde-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Campeche</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 50%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">290</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-morado-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Aguascalientes</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 70%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">483</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-azul-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Baja california</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 80%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">1497</p>
-                            </div>
-                            <div class="form-group col-lg-2 col-md-12">
-                                <div class="cuadro-info-verde-sm">
-                                    <p class="font-20 color-go text-center cuadro-info-texto p-2"><i
-                                            class="fas fa-globe-americas"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-10 col-md-12">
-                                <p class="mb-1">Campeche</p>
-                                <div class="progress-orange ml-3">
-                                    <div class="progress-bar-orange" role="progressbar" style="width: 50%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="font-13 float-right">290</p>
-                            </div>
-                        </div>
-                    </div>
+            <footer class="mt-5">
+                <div class="caja">
+                    <img class="img-fluid" src="./img/olas-naranjas.png" alt="olas naranjas">
+                    <a class="text-white texto-footer1" href="">Aviso de privacidad</a><br>
+                    <a class="text-white texto-footer2" href="">Preguntas frecuentes</a>
+                    <p class="text-white texto-footer3">© Cemefi
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                    </p>
                 </div>
-            </div>
+            </footer>
         </div>
     </div>
-    <footer class="mt-5">
-        <div class="caja">
-            <img class="img-fluid" src="./img/olas-naranjas.png" alt="olas naranjas">
-            <a class="text-white texto-footer1" href="">Aviso de privacidad</a><br>
-            <a class="text-white texto-footer2" href="">Preguntas frecuentes</a>
-            <p class="text-white texto-footer3">© Cemefi 2021</p>
-        </div>
-    </footer>
 </body>
+
+<!-- JS boostrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
+
+<!-- Menu Toggle Script -->
+<script src="./js/sidebar.js"></script>
+
+<!-- Validar formularios -->
+<script src="./js/validarFormularios.js"></script>
 
 </html>
