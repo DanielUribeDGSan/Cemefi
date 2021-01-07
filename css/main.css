@@ -1174,6 +1174,9 @@
         }
         
         @media (max-width: 601px) {
+            .modal-content-search {
+                height: 450px;
+            }
             .esconder-sm {
                 display: none;
             }
