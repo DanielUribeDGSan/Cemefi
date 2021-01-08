@@ -21,3 +21,7 @@ $("#close-menu").click(function (e) {
     content.style.opacity = "0";
   }
 });
+
+$("#abrirModal").click(function () {
+  $("#lib-anim").remove();
+});

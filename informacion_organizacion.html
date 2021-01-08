@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMEFI</title>
+    <link rel="icon" type="image/png" href="./img/icono-cemefi.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Animaciones -->
+    <link id="lib-anim" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="./css/main.css?ver=1.0.2">
+
+    <!-- Google Map -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhpy_QS2Idi5MsBff1UDtlhQysstePASE&callback=initMap&libraries=&v=weekly"
+        defer></script>
+
+    <!-- Mostrar mapa -->
+    <script src="./js/map.js?ver=1.0.2"></script>
+
+    <!-- Sidebar -->
+    <link href="./css/simple-sidebar.css?ver=1.0.2" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="d-flex toggled" id="wrapper">
+        <!-- Sidebar -->
+        <div class="border-right" id="sidebar-wrapper">
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <a href="./index.html"> <img class="img-fluid" src="./img/logo-blanco-cemefi.png" alt="logo cemefi"
+                            width="40%"></a>
+                </div>
+                <div class="col-12 espacio-100"></div>
+            </div>
+            <div class="list-group list-group-flush">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="informacion_organizacion.html"
+                            class="list-group-item list-group-item-action text-white"><i
+                                class="fas fa-pencil-alt texto-icon-sidebar"></i>
+                            <span class="border-b-w texto-sidebar">Editar registro de la organización</span></a>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <a href="estadisticas.html" class="list-group-item list-group-item-action text-white"><i
+                                class="far fa-chart-bar texto-icon-sidebar"></i>
+                            <span class="border-b-w texto-sidebar">Estadísticas</span></a>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <a href="#" class="list-group-item list-group-item-action text-white"><i
+                                class="fas fa-search texto-icon-sidebar"></i>
+                            <span class="border-b-w texto-sidebar">Buscador</span></a>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <a href="" class="list-group-item list-group-item-action text-white" id="close-menu">
+                            <i class="fas fa-times texto-icon-sidebar"></i>
+                            <span class="border-b-w texto-sidebar">Cerrar menu</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <div id="page-content-wrapper">
+            <header id="header" class="container-fluid ">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <a class="navbar-brand" href="./index.html"><img src="./img/logocemefi.png" alt="logo cemefi"
+                                width="130px"></a>
+                        <a class="navbar-toggler" id="menu-toggle">
+                            <span class="navbar-toggler-icon"></span>
+                        </a>
+                        <div class="collapse navbar-collapse ml-lg-4 mt-md-3" id="navbarNavDropdown">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="registro.html">Registro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="estadisticas.html">Estadística</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="iniciar-sesion.html">Inciair sesión</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline">
+                                <div class="box">
+                                    <div class="container-1">
+                                        <span class="icon"><i class="fa fa-search"></i></span>
+                                        <input class="outline" type="search" id="search"
+                                            placeholder="Inserte alguna palabra o frase que desee buscar en los campos" />
+                                    </div>
+                                </div>
+                            </form>
+                            <a href="contacto.html" class="btn btn-orange ml-2"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="container mt-5">
+                <a href="./" class="btn texto-naranja animate__animated animate__fadeInDown"><i
+                        class="fas fa-arrow-left"></i> REGRESAR</a>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <h2 class="mt-2 animate__animated animate__fadeInLeft">Información detallada de la organización
+                        </h2>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-right">
+                        <button class="btn btn-blanco-sm mr-1"><i class="fas fa-chevron-left"></i></button>
+                        <button class="btn btn-blanco-sm"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p class="texto-gris animate__animated animate__fadeInRight">Banco de Alimentos Cáritas del
+                            Estado de México</p>
+                    </div>
+                </div>
+                <div class="row animate__animated animate__fadeInUp">
+                    <div class="col-lg-12 col-md-12 col-sm-12 eliminar-p">
+                        <a class="btn btn-blanco-md sombra boder-none font-11" href=""><span class=""><i
+                                    class="fas fa-info-circle"></i> Datos generales</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11 " href=""><span class=""><i
+                                    class="fas fa-info-circle"></i> Perfil</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11 " href=""><span class=""><i
+                                    class="fas fa-info-circle"></i> Estructura</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11 " href=""><span class=""><i
+                                    class="fas fa-info-circle"></i> Financiamiento</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11 " href=""><span class=""><i
+                                    class="fas fa-info-circle"></i> Proyección</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11 " href=""><span class=""><i
+                                    class="fas fa-info-circle"></i> Transparencia</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11 " href=""><span class=""><i
+                                    class="fas fa-info-circle"></i> Comentarios</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11 " href=""><span class="">Fecha
+                                de
+                                Actualización</span></a>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 mt-5 text-right">
+                        <a href=""><img class="img-fluid" src="./img/facebook.png" alt="logo facebook" width="45px"></a>
+                        <a href=""><img class="img-fluid" src="./img/linkeding.png" alt="logo linkeding"
+                                width="45px"></a>
+                        <a href=""><img class="img-fluid" src="./img/twitter.png" alt="logo twitter" width="45px"></a>
+                        <a href=""><img class="img-fluid" src="./img/instagram.png" alt="logo instagram"
+                                width="45px"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 centrar-sm animate__animated animate__fadeInLeft">
+                        <a href=""><img class="img-fluid img-org" src="./img/bamx.png" alt="logo bamx"
+                                width="60%"></a><br class="espacio-remover-sm espacio-remover-md">
+                        <a href=""><img class="img-fluid img-org mt-2" src="./img/info-org2.png" alt="logo bamx"
+                                width="65%"></a><br class="espacio-remover-sm">
+                        <a href=""><img class="img-fluid img-org mt-2" src="./img/info-org1.png" alt="logo bamx"
+                                width="65%"></a>
+                    </div>
+                    <div class="col-lg-8 animate__animated animate__fadeInRight">
+                        <p class="op-9"><b class="op-7">Razón Social:</b> Banco de Alimentos Cáritas del Estado de
+                            México</p>
+                        <p class="op-9"><b class="op-7">Siglas:</b> BAMEX </p>
+                        <p class="op-9"><b class="op-7">Figura Legal:</b> I.A.P. - I.B.P. - A.B.P. -F.B.P</p>
+                        <p class="op-9"><b class="op-7">Estado:</b> Estado de México</p>
+                        <p class="op-9"><b class="op-7">Delegación/Municipio:</b> Toluca</p>
+                        <p class="op-9">Colonia: Parque Industrial Toluca</p>
+                        <p class="op-9"><b class="op-7">Calle y Número:</b> Francisco Goldwalt 104 </p>
+                        <p class="op-9"><b class="op-7">CP:</b> 52000 </p>
+                        <p class="op-9"><b class="op-7">Teléfono:</b> (722) 236-7466 I (274) 7520058</p>
+                        <p class="op-9"><b class="op-7">Domicilio de Contacto:</b> FRANCISCO GOLDWALT 104 PARQUE
+                            INDUSTRIAL TOLUCA,
+                            TOLUCA ESTADO
+                            DE
+                            MEXICO C.P. 52000 </p>
+                        <p class="op-9"><b class="op-7">Página electrónica:</b> www.bamex.org</p>
+                        <p class="op-9"><b class="op-7">Correo de contacto con la organización:</b>
+                            mirna.delgado@bamex.org </p>
+                        <p class="op-9"><b class="op-7">RFC:</b> BAC971020H91</p>
+                        <p class="op-9"><b class="op-7">¿Desde qué año opera de manera ininterrumpida?</b> : 20</p>
+                        <p class="op-9"><b class="op-7">Autorizada para proporcionar recibos deducibles de
+                                impuestos:</b> Sí</p>
+                        <p class="op-9"><b class="op-7">Fecha de última publicación como donataria autorizada:</b>
+                            28/12/2019</p>
+                        <p class="op-9"><b class="op-7">N° CLUNI:</b> BAC9710201501F</p>
+                        <p class="op-9"><b class="op-7">Objeto Social:</b> </p>
+                        <p class="op-9">A) Atender a personas que por sus carencias socio
+                            económicas o por problemas de
+                            invalidez se vean impedidas para satisfacer sus requerimientos básicos de subsistencia y
+                            desarrollo. B) Recolectar,
+                            patrocinar y administrar toda clase de alimentos y hacerlos llegar a la población más
+                            necesitada. C) Captar de los
+                            comerciantes, agricultores e industria alimenticia los alimentos que han perdido cualidades
+                            de
+                            comercialización, pero
+                            que están en condiciones de ser consumidos por seres humanos. D) Gestionar y obtener
+                            donativos
+                            en efectivo en especie
+                            provenientes de empresas, instituciones, fundaciones, instituciones gubernamentales,
+                            asociaciones públicas o privadas
+                            del país o del extranjero para destinarse a la consecución del objeto social. E) Organizar
+                            campañas de acopio de
+                            alimentos y productos básicos, así como eventos especiales para recaudar fondos para la
+                            institución.</p>
+                        <p class="op-9"> <b class="op-7">Tipo de donante:</b> Independiente </p>
+                        <p class="op-9"><b class="op-7">Campo de acción:</b> Asistencia social y atención a desastres
+                        </p>
+                        <p class="op-9"><b class="op-7">Sub campo de acción:</b> Banco de alimentos</p>
+                        <p class="op-9"><b class="op-7">Naturaleza de institución:</b> Donante y operativa</p>
+                        <p class="op-9"><b class="op-7">Fecha de constitución:</b>s 20/10/1997</p>
+                        <p class="op-9"><b class="op-7">¿Forma parte de Cemefi?:</b> Afiliado</p>
+                        <p class="op-9"><b class="op-7">Autorización para recibir donativos del extranjero:</b> Sí</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="mt-5">
+                <div class="caja">
+                    <img class="img-fluid" src="./img/olas-naranjas.png" alt="olas naranjas">
+                    <a class="text-white texto-footer1" href="">Aviso de privacidad</a><br>
+                    <a class="text-white texto-footer2" href="">Preguntas frecuentes</a>
+                    <p class="text-white texto-footer3">© Cemefi
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+<!-- JS boostrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+<!-- Menu Toggle Script -->
+<script src="./js/sidebar.js?ver=1.0.2"></script>
+
+<!-- Validar formularios -->
+<script src="./js/validarFormularios.js?ver=1.0.2"></script>
+
+</html>

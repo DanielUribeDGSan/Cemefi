@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEMEFI</title>
     <link rel="icon" type="image/png" href="./img/icono-cemefi.png">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Animaciones -->
+    <link id="lib-anim" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Alertas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- CSS Principal -->
-    <link rel="stylesheet" href="./css/main.css?ver=1.0.0">
+    <link rel="stylesheet" href="./css/main.css?ver=1.0.2">
 
     <!-- Google Map -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -22,10 +29,10 @@
         defer></script>
 
     <!-- Mostrar mapa -->
-    <script src="./js/map.js?ver=1.0.0"></script>
+    <script src="./js/map.js?ver=1.0.2"></script>
 
     <!-- Sidebar -->
-    <link href="./css/simple-sidebar.css?ver=1.0.0" rel="stylesheet">
+    <link href="./css/simple-sidebar.css?ver=1.0.2" rel="stylesheet">
 
 </head>
 
@@ -33,16 +40,37 @@
     <div class="d-flex toggled" id="wrapper">
         <!-- Sidebar -->
         <div class="border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Start Bootstrap </div>
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <a href="./index.html"> <img class="img-fluid" src="./img/logo-blanco-cemefi.png" alt="logo cemefi"
+                            width="40%"></a>
+                </div>
+                <div class="col-12 espacio-100"></div>
+            </div>
             <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action text-white"><i
-                        class="fas fa-angle-double-left font-25"></i>
-                    <span class="border-b-w">Dashboard</span></a>
-                <a href="#" class="list-group-item list-group-item-action text-white">Shortcuts</a>
-                <a href="#" class="list-group-item list-group-item-action text-white">Overview</a>
-                <a href="#" class="list-group-item list-group-item-action text-white">Events</a>
-                <a href="#" class="list-group-item list-group-item-action text-white">Profile</a>
-                <a href="#" class="list-group-item list-group-item-action text-white">Status</a>
+                <div class="row">
+                    <div class="col-12">
+                        <a href="informacion_organizacion.html"
+                            class="list-group-item list-group-item-action text-white"><i
+                                class="fas fa-pencil-alt texto-icon-sidebar"></i>
+                            <span class="border-b-w texto-sidebar">Editar registro de la organización</span></a>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <a href="estadisticas.html" class="list-group-item list-group-item-action text-white"><i
+                                class="far fa-chart-bar texto-icon-sidebar"></i>
+                            <span class="border-b-w texto-sidebar">Estadísticas</span></a>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <a href="#" class="list-group-item list-group-item-action text-white"><i
+                                class="fas fa-search texto-icon-sidebar"></i>
+                            <span class="border-b-w texto-sidebar">Buscador</span></a>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <a href="" class="list-group-item list-group-item-action text-white" id="close-menu">
+                            <i class="fas fa-times texto-icon-sidebar"></i>
+                            <span class="border-b-w texto-sidebar">Cerrar menu</span></a>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -50,7 +78,7 @@
             <header id="header" class="container-fluid ">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg navbar-light ">
-                        <a class="navbar-brand" href="#"><img src="./img/logocemefi.png" alt="logo cemefi"
+                        <a class="navbar-brand" href="./index.html"><img src="./img/logocemefi.png" alt="logo cemefi"
                                 width="130px"></a>
                         <a class="navbar-toggler" id="menu-toggle">
                             <span class="navbar-toggler-icon"></span>
@@ -67,7 +95,7 @@
                                     <a class="nav-link" href="estadisticas.html">Estadística</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="iniciar-sesion.html">Sesión</a>
+                                    <a class="nav-link" href="iniciar-sesion.html">Inciair sesión</a>
                                 </li>
                             </ul>
                             <form class="form-inline">
@@ -85,13 +113,16 @@
                 </div>
             </header>
             <div class="container mt-5">
-                <h1 class="text-center">Directorio de Instituciones Filantrópicas</h1>
-                <p class="text-center texto-gris font-15 op-7">Llene los campos con la información que conozca de la
+                <h1 class="text-center animate__animated animate__fadeInDown">Directorio de Instituciones Filantrópicas
+                </h1>
+                <p class="text-center texto-gris font-15 op-7 animate__animated animate__fadeInLeft">Llene los campos
+                    con la información que conozca de la
                     organización que desea buscar</p>
-                <h6 class="text-center"><i class="fas fa-chart-line texto-naranja"></i> <b class="op-7">ORGANIZACIONES
+                <h6 class="text-center animate__animated animate__fadeInRight"><i
+                        class="fas fa-chart-line texto-naranja"></i> <b class="op-7">ORGANIZACIONES
                         DE LA
                         SOCIEDAD CIVIL REGISTRADAS EN MÉXICO: 45,817</b></h6>
-                <div class="contenedor-busqueda mt-5 pl-5 pr-5 pt-4 pb-3">
+                <div class="contenedor-busqueda mt-5 pl-5 pr-5 pt-4 pb-3 animate__animated animate__fadeInUp">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-lg-3 col-md-4 border-r">
@@ -115,13 +146,13 @@
                                     placeholder="Más criterios de búsqueda">
                             </div>
                             <div class="contenedor-search">
-                                <a type="button" class="btn-search btn-search-blanco ml-2" data-toggle="modal"
+                                <a id="abrirModal" type="button" class="btn-search btn-search-blanco ml-2" data-toggle="modal"
                                     data-target="#exampleModal"><i class="fas fa-search"></i></a>
                             </div>
                         </div>
                     </form>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade animate__animated animate__fadeInRight" id="exampleModal" tabindex="-1"
+                        role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content modal-content-search">
                                 <div class="modal-header modal-header-search">
@@ -313,7 +344,8 @@
 
                 </div>
                 <div class="espacio-50"></div>
-                <p class="mt-5 text-center font-12 op-7 mr-5">Si su organización no aparece en este directorio, le
+                <p class="mt-5 text-center font-12 op-7 mr-5 animate__animated animate__fadeInUp">Si su organización no
+                    aparece en este directorio, le
                     invitamos a
                     llenar su pre-registro . Si tiene problemas para ingresar comuníquese con Julio Casas al teléfono
                     5552768530, extensión 151 o envíe un correo a: directorios@cemefi.org.</p>
@@ -343,9 +375,11 @@
     crossorigin="anonymous"></script>
 
 <!-- Menu Toggle Script -->
-<script src="./js/sidebar.js"></script>
+<script src="./js/sidebar.js?ver=1.0.2"></script>
 
 <!-- Validar formularios -->
-<script src="./js/validarFormularios.js"></script>
+<script src="./js/validarFormularios.js?ver=1.0.2"></script>
+
+
 
 </html>
