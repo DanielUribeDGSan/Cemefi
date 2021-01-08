@@ -15,18 +15,6 @@ const mostrarContrasena = () => {
   }
 };
 
-const mostrarContrasenaModal = () => {
-  const contrasena = document.getElementById("contrasena-r");
-  const ojo = document.getElementById("mostrarCont2");
-  if (contrasena.type == "password") {
-    contrasena.type = "text";
-    ojo.innerHTML = '<i class="far fa-eye-slash op-7"></i>';
-  } else {
-    contrasena.type = "password";
-    ojo.innerHTML = '<i class="far fa-eye op-7"></i>';
-  }
-};
-
 const formRegistro = () => {
   Swal.fire({
     title: "Tu organización ya está registrada",
@@ -415,7 +403,7 @@ const validarFormLogin = () => {
 
 const validarFormRestablecer = () => {
   const usuario = document.getElementById("usuario-r").value;
-  const contrasena = document.getElementById("contrasena-r").value;
+  const correo = document.getElementById("correo-r").value;
 
   if (usuario == "") {
     Swal.fire({
@@ -429,11 +417,23 @@ const validarFormRestablecer = () => {
       confirmButtonAriaLabel: "Thumbs up, great!",
     });
     return false;
-  } else if (contrasena == "") {
+  } else if (correo == "") {
     Swal.fire({
       title: "Campo vacío.",
       icon: "warning",
-      html: 'El campo <b>"Contraseña"</b> no puede quedar vacío',
+      html: 'El campo <b>"Correo electrónico"</b> no puede quedar vacío',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: "Aceptar",
+      confirmButtonAriaLabel: "Thumbs up, great!",
+    });
+    return false;
+  } else if (!validar_email(correo)) {
+    Swal.fire({
+      title: "Correo no valido.",
+      icon: "warning",
+      html: "Escribe correctamente tu correo electrónico.",
       showCloseButton: true,
       showCancelButton: false,
       focusConfirm: false,
