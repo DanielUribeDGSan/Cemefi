@@ -1,7 +1,19 @@
-function validar_email(email) {
-  var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+const validar_email = (email) => {
+  const regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   return regex.test(email) ? true : false;
-}
+};
+
+const mostrarContrasena = () => {
+  const contrasena = document.getElementById("contrasena");
+  const ojo = document.getElementById("mostrarCont");
+  if (contrasena.type == "password") {
+    contrasena.type = "text";
+    ojo.innerHTML = '<i class="far fa-eye-slash op-7"></i>';
+  } else {
+    contrasena.type = "password";
+    ojo.innerHTML = '<i class="far fa-eye op-7"></i>';
+  }
+};
 
 const formRegistro = () => {
   Swal.fire({
