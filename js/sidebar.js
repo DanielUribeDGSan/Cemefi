@@ -42,7 +42,7 @@ function readCookie(name) {
 const validarNav = () => {
   if (!readCookie("navItem")) {
     var expiresdate = new Date(2068, 1, 02, 11, 20);
-    var cookievalue = "Inicio";
+    var cookievalue = "1";
     document.cookie =
       "navItem=" +
       encodeURIComponent(cookievalue) +
@@ -50,34 +50,37 @@ const validarNav = () => {
       expiresdate.toUTCString();
   }
   $("ul li:eq(0)").click(function () {
-    document.cookie = "navItem=Inicio";
+    document.cookie = "navItem=1";
   });
   $("ul li:eq(1)").click(function () {
-    document.cookie = "navItem=Registro";
+    document.cookie = "navItem=2";
   });
   $("ul li:eq(2)").click(function () {
-    document.cookie = "navItem=Estadistica";
+    document.cookie = "navItem=3";
   });
   $("ul li:eq(3)").click(function () {
-    document.cookie = "navItem=Sesion";
+    document.cookie = "navItem=4";
   });
   $(".btn-contacto").click(function () {
-    document.cookie = "navItem=Contacto";
+    document.cookie = "navItem=5";
+  });
+  $(".navbar-brand").click(function () {
+    document.cookie = "navItem=1";
   });
 
-  if (readCookie("navItem") == "Inicio") {
+  if (readCookie("navItem") == "1") {
     $("li").removeClass("active");
     $("ul li:eq(0)").addClass("active");
-  } else if (readCookie("navItem") == "Registro") {
+  } else if (readCookie("navItem") == "2") {
     $("li").removeClass("active");
     $("ul li:eq(1)").addClass("active");
-  } else if (readCookie("navItem") == "Estadistica") {
+  } else if (readCookie("navItem") == "3") {
     $("li").removeClass("active");
     $("ul li:eq(2)").addClass("active");
-  } else if (readCookie("navItem") == "Sesion") {
+  } else if (readCookie("navItem") == "4") {
     $("li").removeClass("active");
     $("ul li:eq(3)").addClass("active");
-  } else if (readCookie("navItem") == "Contacto") {
+  } else if (readCookie("navItem") == "5") {
     $("li").removeClass("active");
     $(".btn-contacto").css("background-color", "#FFD743");
   }
