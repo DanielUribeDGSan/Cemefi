@@ -15,6 +15,18 @@ const mostrarContrasena = () => {
   }
 };
 
+const mostrarContrasenaModal = () => {
+  const contrasena = document.getElementById("contrasena-r");
+  const ojo = document.getElementById("mostrarCont2");
+  if (contrasena.type == "password") {
+    contrasena.type = "text";
+    ojo.innerHTML = '<i class="far fa-eye-slash op-7"></i>';
+  } else {
+    contrasena.type = "password";
+    ojo.innerHTML = '<i class="far fa-eye op-7"></i>';
+  }
+};
+
 const formRegistro = () => {
   Swal.fire({
     title: "Tu organización ya está registrada",
