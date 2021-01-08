@@ -352,7 +352,7 @@ const validarFormContacto = () => {
     confirmButtonAriaLabel: "Thumbs up, great!",
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
-    location.href = "/cemefi";
+    location.href = "./index.html";
   });
   // submit del form va aquí
 };
