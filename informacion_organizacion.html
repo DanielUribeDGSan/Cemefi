@@ -136,18 +136,27 @@
                         <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
                                     class="fas fa-info-circle"></i> Perfil</span></a>
                         <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
+                                    class="fas fa-info-circle"></i>
+                                Donataria</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
+                                    class="fas fa-info-circle"></i>
+                                Cluni</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
                                     class="fas fa-info-circle"></i> Estructura</span></a>
                         <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
                                     class="fas fa-info-circle"></i> Financiamiento</span></a>
                         <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
-                                    class="fas fa-info-circle"></i> Proyección</span></a>
+                                    class="fas fa-info-circle"></i>
+                                Vinculación</span></a>
+                        <!-- <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
+                                    class="fas fa-info-circle"></i> Proyección</span></a> -->
                         <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
                                     class="fas fa-info-circle"></i> Transparencia</span></a>
-                        <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
+                        <!-- <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
                                     class="fas fa-info-circle"></i> Comentarios</span></a>
                         <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class="">Fecha
                                 de
-                                Actualización</span></a>
+                                Actualización</span></a> -->
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 mt-5 text-right">
                         <a href=""><img class="img-fluid" src="./img/facebook.png" alt="logo facebook" width="45px"></a>
@@ -254,6 +263,13 @@
                                 <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
                                     id="pagWebF1" name="pagWebF1" value="www.bamex.org">
                             </div>
+                            <div class="form-group-info">
+                                <label for="miembroCemefiF1"><span class="form-label-g font-weight-bold">Miembro de
+                                        Cemefi:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="miembroCemefiF1" name="miembroCemefiF1" value="">
+                            </div>
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo2">
                             <div class="form-group-info">
@@ -329,39 +345,80 @@
                                         población
                                         destinataria de sus servicios:</span>
                                 </label>
-                                <input type="text" class="form-control-info w-80 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
                                     id="generoPoblacionF2" name="generoPoblacionF2" value="">
                             </div>
                             <div class="form-group-info">
                                 <label for="rangoEdadesF2"><span class="form-label-g font-weight-bold">Rango de edades
                                         de la población destinataria de sus servicios:</span>
                                 </label>
-                                <input type="text" class="form-control-info w-80 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
                                     id="rangoEdadesF2" name="rangoEdadesF2" value="">
                             </div>
                             <div class="form-group-info">
                                 <label for="tipoPoblacionF2"><span class="form-label-g font-weight-bold">Tipo de
                                         población destinataria de sus servicios:</span>
                                 </label>
-                                <input type="text" class="form-control-info w-80 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
                                     id="tipoPoblacionF2" name="tipoPoblacionF2" value="">
                             </div>
                             <div class="form-group-info">
                                 <label for="escalaGeograficaF2"><span class="form-label-g font-weight-bold">Escala
                                         geográfica de acción:</span>
                                 </label>
-                                <input type="text" class="form-control-info w-80 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
                                     id="escalaGeograficaF2" name="escalaGeograficaF2" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="odsF2"><span class="form-label-g font-weight-bold">ODS:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm" id="odsF2"
+                                    name="odsF2" value="">
                             </div>
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo3">
                             <div class="form-group-info">
-                                <label for="razonSocialF1"><span class="form-label-g font-weight-bold">Razón
-                                        Social:</span>
+                                <label for="oscF3"><span class="form-label-g font-weight-bold">En caso de que la OSC no
+                                        sea Donataria, aparecerá una leyenda diciendo:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm" id="oscF3"
+                                    name="oscF3" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="razonSocialSatF3"><span class="form-label-g font-weight-bold">Denominación o
+                                        razón social ante SAT:</span>
                                 </label>
                                 <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
-                                    id="razonSocialF1" name="razonSocialF1"
-                                    value="Banco de Alimentos Cáritas del Estado de México">
+                                    id="razonSocialSatF3" name="razonSocialSatF3" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="actividadF3"><span class="form-label-g font-weight-bold">Actividad o fin
+                                        autorizado:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="actividadF3" name="actividadF3" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="autorizacionDonativoF3"><span
+                                        class="form-label-g font-weight-bold">Autorización para recibir donativos del
+                                        extranjero:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="autorizacionDonativoF3" name="autorizacionDonativoF3" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="ultimaDonatoriaF3"><span class="form-label-g font-weight-bold">Fecha de
+                                        última publicación como donataria autorizada:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="ultimaDonatoriaF3" name="ultimaDonatoriaF3" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="domicilioFiscalF3"><span class="form-label-g font-weight-bold">Domicilio
+                                        fiscal:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="domicilioFiscalF3" name="domicilioFiscalF3" value="">
                             </div>
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo4">
