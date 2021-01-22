@@ -98,6 +98,7 @@ $(document).ready(function () {
   const formsnfo6 = $("#formsInfo6");
   const formsnfo7 = $("#formsInfo7");
   const formsnfo8 = $("#formsInfo8");
+  const formsnfo9 = $("#formsInfo9");
 
   menues.click(function () {
     menues.removeClass("btn-blanco-md-active");
@@ -143,5 +144,10 @@ $(document).ready(function () {
     formsInfo.removeClass("mostrar");
     formsInfo.addClass("ocultar");
     formsnfo8.addClass("mostrar");
+  });
+  $("div>a.btn-blanco-md:eq(8)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo9.addClass("mostrar");
   });
 });

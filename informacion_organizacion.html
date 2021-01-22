@@ -17,7 +17,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- CSS Principal -->
-    <link rel="stylesheet" href="./css/main.css?ver=1.0.9">
+    <link rel="stylesheet" href="./css/main.css?ver=1.0.10">
 
     <!-- Google Map -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -26,10 +26,10 @@
         defer></script>
 
     <!-- Mostrar mapa -->
-    <script src="./js/map.js?ver=1.0.9"></script>
+    <script src="./js/map.js?ver=1.0.10"></script>
 
     <!-- Sidebar -->
-    <link href="./css/simple-sidebar.css?ver=1.0.9" rel="stylesheet">
+    <link href="./css/simple-sidebar.css?ver=1.0.10" rel="stylesheet">
 
 </head>
 
@@ -152,6 +152,10 @@
                                     class="fas fa-info-circle"></i> Proyección</span></a> -->
                         <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
                                     class="fas fa-info-circle"></i> Transparencia</span></a>
+                        <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
+                                    class="fas fa-info-circle"></i>
+                                Cierre de Registro
+                            </span></a>
                         <!-- <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class=""><i
                                     class="fas fa-info-circle"></i> Comentarios</span></a>
                         <a class="btn btn-blanco-md sombra boder-none font-11  pointer"><span class="">Fecha
@@ -423,52 +427,324 @@
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo4">
                             <div class="form-group-info">
-                                <label for="razonSocialF1"><span class="form-label-g font-weight-bold">Razón
-                                        Social:</span>
+                                <label for="oscF4"><span class="form-label-g font-weight-bold">En caso de que la OSC no
+                                        tenga Cluni, aparecerá una leyenda diciendo:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm" id="oscF4"
+                                    name="oscF4" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="razonSocialF4"><span class="form-label-g font-weight-bold">Razón
+                                        social:</span>
                                 </label>
                                 <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
-                                    id="razonSocialF1" name="razonSocialF1"
-                                    value="Banco de Alimentos Cáritas del Estado de México">
+                                    id="razonSocialF4" name="razonSocialF4" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="figuraJuridicaF4"><span class="form-label-g font-weight-bold">Figura
+                                        jurídica:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="figuraJuridicaF4" name="figuraJuridicaF4" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="nCluniF4"><span class="form-label-g font-weight-bold">N° de Cluni:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="nCluniF4" name="nCluniF4" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="estatusCluniF4"><span class="form-label-g font-weight-bold">Estatus
+                                        Cluni:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="estatusCluniF4" name="estatusCluniF4" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="actividadF4"><span class="form-label-g font-weight-bold">Actividad:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="actividadF4" name="actividadF4" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="domicilioRegistroF4"><span class="form-label-g font-weight-bold">Domicilio
+                                        ante Registro Federal de las Organizaciones de la Sociedad Civil:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="domicilioRegistroF4" name="domicilioRegistroF4" value="">
                             </div>
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo5">
                             <div class="form-group-info">
-                                <label for="razonSocialF1"><span class="form-label-g font-weight-bold">Razón
-                                        Social:</span>
+                                <label for="presidenteConsejoF5"><span class="form-label-g font-weight-bold">Presidente
+                                        del consejo o patronato:</span>
                                 </label>
                                 <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
-                                    id="razonSocialF1" name="razonSocialF1"
-                                    value="Banco de Alimentos Cáritas del Estado de México">
+                                    id="presidenteConsejoF5" name="presidenteConsejoF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="vicepresidenteF5"><span
+                                        class="form-label-g font-weight-bold">Vicepresidente:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="vicepresidenteF5" name="vicepresidenteF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="representanteLegalF5"><span
+                                        class="form-label-g font-weight-bold">Representante legal:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="representanteLegalF5" name="representanteLegalF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="patronoPresidenteF5"><span class="form-label-g font-weight-bold">Patrono
+                                        presidente:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="patronoPresidenteF5" name="patronoPresidenteF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="consejeroF5"><span class="form-label-g font-weight-bold">Consejero:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="consejeroF5" name="consejeroF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="otraAutoridadF5"><span class="form-label-g font-weight-bold">Otra máxima
+                                        autoridad:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="otraAutoridadF5" name="otraAutoridadF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="presidenteEjecutivoF5"><span
+                                        class="form-label-g font-weight-bold">Presidente ejecutivo:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="presidenteEjecutivoF5" name="presidenteEjecutivoF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="directorGeneralF5"><span class="form-label-g font-weight-bold">Director
+                                        general:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="directorGeneralF5" name="directorGeneralF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="directorF5"><span class="form-label-g font-weight-bold">Director:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="directorF5" name="directorF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="coordinadorGeneralF5"><span
+                                        class="form-label-g font-weight-bold">Coordinador general:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="coordinadorGeneralF5" name="coordinadorGeneralF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="coordinadorF5"><span
+                                        class="form-label-g font-weight-bold">Coordinador:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="coordinadorF5" name="coordinadorF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="contactoF5"><span class="form-label-g font-weight-bold">Contacto:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="contactoF5" name="contactoF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="otroOperativoF5"><span class="form-label-g font-weight-bold">Otro
+                                        operativo:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="otroOperativoF5" name="otroOperativoF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="totalPersonasTrabajanF5"><span class="form-label-g font-weight-bold">Total
+                                        de
+                                        personas que trabajan en la institución:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="totalPersonasTrabajanF5" name="totalPersonasTrabajanF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="nPersonasNominaF5"><span class="form-label-g font-weight-bold">Número de
+                                        personas en nómina:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="nPersonasNominaF5" name="nPersonasNominaF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="nPersonasLaboranF5"><span class="form-label-g font-weight-bold">Número de
+                                        personas que laboran por honorarios:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="nPersonasLaboranF5" name="nPersonasLaboranF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="nVoluntariosF5"><span class="form-label-g font-weight-bold">Número de
+                                        voluntarios:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="nVoluntariosF5" name="nVoluntariosF5" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="organosDirectivosF5"><span class="form-label-g font-weight-bold">Órganos
+                                        directivos de la institución:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="organosDirectivosF5" name="organosDirectivosF5" value="">
                             </div>
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo6">
                             <div class="form-group-info">
-                                <label for="razonSocialF1"><span class="form-label-g font-weight-bold">Razón
-                                        Social:</span>
+                                <label for="ingresosAnualesF6"><span class="form-label-g font-weight-bold">Ingresos
+                                        anuales de la Institución:</span>
                                 </label>
                                 <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
-                                    id="razonSocialF1" name="razonSocialF1"
-                                    value="Banco de Alimentos Cáritas del Estado de México">
+                                    id="ingresosAnualesF6" name="ingresosAnualesF6" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="porcentajesDonativosF6"><span
+                                        class="form-label-g font-weight-bold">Porcentaje de ingresos por
+                                        donativos:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="porcentajesDonativosF6" name="porcentajesDonativosF6" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="porcentajesIngresosF6"><span
+                                        class="form-label-g font-weight-bold">Porcentaje de ingresos por cuotas,
+                                        servicios y venta de productos:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="porcentajesIngresosF6" name="porcentajesIngresosF6" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="porcentajesIngresosGobiernoF6"><span
+                                        class="form-label-g font-weight-bold">Porcentaje de ingresos provenientes de
+                                        gobierno y organismos internacionales:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="porcentajesIngresosGobiernoF6" name="porcentajesIngresosGobiernoF6" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="porcentajesDeMasIngresosF6"><span
+                                        class="form-label-g font-weight-bold">Porcentaje de demás ingresos
+                                        (arrendamientos, regalías, dividendos y otros):</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="porcentajesDeMasIngresosF6" name="porcentajesDeMasIngresosF6" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="gastoAnualF6"><span class="form-label-g font-weight-bold">Gasto promedio
+                                        anual:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="gastoAnualF6" name="gastoAnualF6" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="porcentajeProyectosPropiosF6"><span
+                                        class="form-label-g font-weight-bold">Porcentaje de ingresos destinados a
+                                        proyectos propios:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="porcentajeProyectosPropiosF6" name="porcentajeProyectosPropiosF6" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="porcentajeProyectosDeOtrosF6"><span
+                                        class="form-label-g font-weight-bold">Porcentaje de ingresos destinados a
+                                        financiar proyectos de otras:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="porcentajeProyectosDeOtrosF6" name="porcentajeProyectosDeOtrosF6" value="">
                             </div>
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo7">
                             <div class="form-group-info">
-                                <label for="razonSocialF1"><span class="form-label-g font-weight-bold">Razón
-                                        Social:</span>
+                                <label for="RedesCemefiF7"><span class="form-label-g font-weight-bold">Forma parte de
+                                        Redes Cemefi:</span>
                                 </label>
                                 <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
-                                    id="razonSocialF1" name="razonSocialF1"
-                                    value="Banco de Alimentos Cáritas del Estado de México">
+                                    id="RedesCemefiF7" name="RedesCemefiF7" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="vinculacionRedesF7"><span class="form-label-g font-weight-bold">¿Tiene
+                                        vinculación con otras redes o asociaciones?</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="vinculacionRedesF7" name="vinculacionRedesF7" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="cualesF7"><span class="form-label-g font-weight-bold">¿Cuáles?</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="cualesF7" name="cualesF7" value="">
                             </div>
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo8">
                             <div class="form-group-info">
-                                <label for="razonSocialF1"><span class="form-label-g font-weight-bold">Razón
-                                        Social:</span>
+                                <label for="acreditacionF8"><span class="form-label-g font-weight-bold">Cuenta con
+                                        Acreditación en Institucionalidad y Transpar:</span>
                                 </label>
                                 <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
-                                    id="razonSocialF1" name="razonSocialF1"
-                                    value="Banco de Alimentos Cáritas del Estado de México">
+                                    id="acreditacionF8" name="acreditacionF8" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="informeActividadesF8"><span class="form-label-g font-weight-bold">¿Realiza
+                                        un
+                                        informe anual de actividades?</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="informeActividadesF8" name="informeActividadesF8" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="planeacionEvaluacionF8"><span class="form-label-g font-weight-bold">¿Realiza
+                                        planeación y evaluación anual de actividades?</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="planeacionEvaluacionF8" name="planeacionEvaluacionF8" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="reconocimientosF8"><span
+                                        class="form-label-g font-weight-bold">Reconocimientos recibidos</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="reconocimientosF8" name="reconocimientosF8" value="">
+                            </div>
+                        </form>
+                        <form action="" class="form-inline ocultar" id="formsInfo9">
+                            <div class="form-group-info">
+                                <label for="personaRegistroF9"><span class="form-label-g font-weight-bold">Persona que
+                                        realizó el registro:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="personaRegistroF9" name="personaRegistroF9" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="cargoDePersonaF9"><span class="form-label-g font-weight-bold">Cargo de la
+                                        persona que realizó el registro:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="cargoDePersonaF9" name="cargoDePersonaF9" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="correoElectronicoF9"><span class="form-label-g font-weight-bold">Correo
+                                        electrónico de la persona que realizó el registro:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="correoElectronicoF9" name="correoElectronicoF9" value="">
+                            </div>
+                            <div class="form-group-info">
+                                <label for="comentariosF9"><span class="form-label-g font-weight-bold">Comentarios del
+                                        personal de Cemefi:</span>
+                                </label>
+                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
+                                    id="comentariosF9" name="comentariosF9" value="">
                             </div>
                         </form>
                     </div>
@@ -499,9 +775,9 @@
     crossorigin="anonymous"></script>
 
 <!-- Menu Toggle Script -->
-<script src="./js/sidebar.js?ver=1.0.9"></script>
+<script src="./js/sidebar.js?ver=1.0.10"></script>
 
 <!-- Validar formularios -->
-<script src="./js/validarFormularios.js?ver=1.0.9"></script>
+<script src="./js/validarFormularios.js?ver=1.0.10"></script>
 
 </html>
