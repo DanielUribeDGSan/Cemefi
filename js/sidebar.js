@@ -88,5 +88,60 @@ const validarNav = () => {
 validarNav();
 
 $(document).ready(function () {
-  console.log("ready!");
+  const menues = $("div>a.btn-blanco-md");
+  const formsInfo = $(".forms-info>.form-inline");
+  const formsnfo1 = $("#formsInfo1");
+  const formsnfo2 = $("#formsInfo2");
+  const formsnfo3 = $("#formsInfo3");
+  const formsnfo4 = $("#formsInfo4");
+  const formsnfo5 = $("#formsInfo5");
+  const formsnfo6 = $("#formsInfo6");
+  const formsnfo7 = $("#formsInfo7");
+  const formsnfo8 = $("#formsInfo8");
+
+  menues.click(function () {
+    menues.removeClass("btn-blanco-md-active");
+    $(this).addClass("btn-blanco-md-active");
+  });
+
+  $("div>a.btn-blanco-md:eq(0)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo1.addClass("mostrar");
+  });
+  $("div>a.btn-blanco-md:eq(1)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo2.addClass("mostrar");
+  });
+  $("div>a.btn-blanco-md:eq(2)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo3.addClass("mostrar");
+  });
+  $("div>a.btn-blanco-md:eq(3)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo4.addClass("mostrar");
+  });
+  $("div>a.btn-blanco-md:eq(4)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo5.addClass("mostrar");
+  });
+  $("div>a.btn-blanco-md:eq(5)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo6.addClass("mostrar");
+  });
+  $("div>a.btn-blanco-md:eq(6)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo7.addClass("mostrar");
+  });
+  $("div>a.btn-blanco-md:eq(7)").click(function () {
+    formsInfo.removeClass("mostrar");
+    formsInfo.addClass("ocultar");
+    formsnfo8.addClass("mostrar");
+  });
 });
