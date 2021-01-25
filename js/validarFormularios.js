@@ -222,66 +222,6 @@ const cambiarFormulario = (form) => {
       return false;
     }
     telText.style.borderBottom = "solid #00e676";
-    if (faceText.value == "") {
-      Swal.fire({
-        title: "Campo vacío.",
-        icon: "warning",
-        html: 'El campo <b>"Facebook"</b> no puede quedar vacío',
-        showCloseButton: true,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText: "Aceptar",
-        confirmButtonAriaLabel: "Thumbs up, great!",
-      });
-      faceText.style.borderBottom = "solid #e53935";
-      return false;
-    }
-    faceText.style.borderBottom = "solid #00e676";
-    if (twitText.value == "") {
-      Swal.fire({
-        title: "Campo vacío.",
-        icon: "warning",
-        html: 'El campo <b>"Twitter"</b> no puede quedar vacío',
-        showCloseButton: true,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText: "Aceptar",
-        confirmButtonAriaLabel: "Thumbs up, great!",
-      });
-      twitText.style.borderBottom = "solid #e53935";
-      return false;
-    }
-    twitText.style.borderBottom = "solid #00e676";
-    if (instText.value == "") {
-      Swal.fire({
-        title: "Campo vacío.",
-        icon: "warning",
-        html: 'El campo <b>"Instagram"</b> no puede quedar vacío',
-        showCloseButton: true,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText: "Aceptar",
-        confirmButtonAriaLabel: "Thumbs up, great!",
-      });
-      instText.style.borderBottom = "solid #e53935";
-      return false;
-    }
-    instText.style.borderBottom = "solid #00e676";
-    if (linkText.value == "") {
-      Swal.fire({
-        title: "Campo vacío.",
-        icon: "warning",
-        html: 'El campo <b>"Linkedin"</b> no puede quedar vacío',
-        showCloseButton: true,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText: "Aceptar",
-        confirmButtonAriaLabel: "Thumbs up, great!",
-      });
-      linkText.style.borderBottom = "solid #e53935";
-      return false;
-    }
-    linkText.style.borderBottom = "solid #00e676";
     progressBar.style.width = "100%";
     Swal.fire({
       title: "Registro realizado correctamente.",
