@@ -114,6 +114,11 @@ $(document).ready(function () {
     formsInfo.removeClass("mostrar");
     formsInfo.addClass("ocultar");
     formsnfo2.addClass("mostrar");
+    const element = document.getElementById("objetivoSocialF2");
+    element.value =
+      "A) Atender a personas que por sus carencias socio económicas o por problemas de invalidez se vean impedidas para satisfacer sus requerimientos básicos de subsistencia y desarrollo.\nB) Recolectar, patrocinar y administrar toda clase de alimentos y hacerlos llegar a la población más necesitada.\nC) Captar de los comerciantes, agricultores e industria alimenticia los alimentos que han perdido cualidades de comercialización, pero que están en condiciones de ser consumidos por seres humanos.\nD) Gestionar y obtener donativos en efectivo en especie provenientes de empresas, instituciones, fundaciones, instituciones gubernamentales, asociaciones públicas o privadas del país o del extranjero destinarse a la consecución del objeto social.\nE) Organizar campañas de acopio de alimentos y productos básicos, así como eventos especiales para recaudar fondos para la institución.";
+    element.style.height = "5px";
+    element.style.height = element.scrollHeight + "px";
   });
   $("div>a.btn-blanco-md:eq(2)").click(function () {
     formsInfo.removeClass("mostrar");
@@ -151,3 +156,22 @@ $(document).ready(function () {
     formsnfo9.addClass("mostrar");
   });
 });
+
+const mostrarMenos = () => {
+  const element = document.getElementById("objetivoSocialF2");
+  let btnTamanio = document.getElementById("acortarTexto");
+  const tamaioElement = parseInt(element.style.height.replace("px", ""));
+
+  if (tamaioElement > 50) {
+    btnTamanio.innerHTML = `Ver más <i class="far fa-eye ml-3"></i>`;
+    element.style.height = "5px";
+    element.style.height = 50 + "px";
+    validarTamanio = 2;
+  } else {
+    btnTamanio.innerHTML = `Ver menos <i class="far fa-eye-slash ml-3"></i>`;
+    element.style.height = "5px";
+    element.style.height = element.scrollHeight + "px";
+    validarTamanio = "";
+  }
+  validarTamanio = 1;
+};

@@ -817,6 +817,11 @@
             margin-bottom: 0;
         }
         
+        .textAreaAuto {
+            resize: none;
+            overflow: hidden;
+        }
+        
          ::-webkit-scrollbar {
             width: 10px;
         }

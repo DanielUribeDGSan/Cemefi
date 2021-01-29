@@ -17,7 +17,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- CSS Principal -->
-    <link rel="stylesheet" href="./css/main.css?ver=1.0.11">
+    <link rel="stylesheet" href="./css/main.css?ver=1.0.12">
 
     <!-- Google Map -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -26,10 +26,10 @@
         defer></script>
 
     <!-- Mostrar mapa -->
-    <script src="./js/map.js?ver=1.0.11"></script>
+    <script src="./js/map.js?ver=1.0.12"></script>
 
     <!-- Sidebar -->
-    <link href="./css/simple-sidebar.css?ver=1.0.11" rel="stylesheet">
+    <link href="./css/simple-sidebar.css?ver=1.0.12" rel="stylesheet">
 
 </head>
 
@@ -279,6 +279,8 @@
                             </div>
                         </form>
                         <form action="" class="form-inline ocultar" id="formsInfo2">
+                            <a class="btn btn-blanco-sm" id="acortarTexto" onclick="mostrarMenos()">Ver menos <i
+                                    class="far fa-eye-slash ml-3"></i></a>
                             <div class="form-group-info">
                                 <label for="fechaConsF2"><span class="form-label-g font-weight-bold">Fecha de
                                         constitución:</span>
@@ -318,9 +320,9 @@
                                 <label for="objetivoSocialF2"><span class="form-label-g font-weight-bold">Objeto
                                         social:</span>
                                 </label>
-                                <input type="text" class="form-control-info w-60 ml-0 ml-md-2 ml-lg-2 w-sm"
-                                    id="objetivoSocialF2" name="objetivoSocialF2"
-                                    value="A) Atender a personas que por sus carencias socio económicas o por problemas de invalidez se vean impedidas para satisfacer sus requerimientos básicos de subsistencia y desarrollo. B) Recolectar, patrocinar y administrar toda clase de alimentos y hacerlos llegar a la población más necesitada. C) Captar de los comerciantes, agricultores e industria alimenticia los alimentos que han perdido cualidades de comercialización, pero que están en condiciones de ser consumidos por seres humanos. D) Gestionar y obtener donativos en efectivo en especie provenientes de empresas, instituciones, fundaciones, instituciones gubernamentales, asociaciones públicas o privadas del país o del extranjero para destinarse a la consecución del objeto social. E) Organizar campañas de acopio de alimentos y productos básicos, así como eventos especiales para recaudar fondos para la institución.">
+                                <textarea type="text"
+                                    class="form-control-info w-100 ml-0 ml-md-2 ml-lg-2 w-sm textAreaAuto"
+                                    id="objetivoSocialF2" name="objetivoSocialF2" rows='1'></textarea>
                             </div>
                             <div class="form-group-info">
                                 <label for="misionF2"><span class="form-label-g font-weight-bold">Misión:</span>
@@ -778,9 +780,9 @@
     crossorigin="anonymous"></script>
 
 <!-- Menu Toggle Script -->
-<script src="./js/sidebar.js?ver=1.0.11"></script>
+<script src="./js/sidebar.js?ver=1.0.12"></script>
 
 <!-- Validar formularios -->
-<script src="./js/validarFormularios.js?ver=1.0.11"></script>
+<script src="./js/validarFormularios.js?ver=1.0.12"></script>
 
 </html>
