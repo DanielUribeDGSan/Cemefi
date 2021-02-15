@@ -20,21 +20,21 @@ function initMap() {
   var infoWindowContent = [
     [
       '<div class="info_content">' +
-        "<h3>Brooklyn Museum</h3>" +
-        "<p>The Brooklyn Museum is an art museum located in the New York City borough of Brooklyn.</p>" +
-        "</div>",
+      "<h3>Brooklyn Museum</h3>" +
+      "<p>The Brooklyn Museum is an art museum located in the New York City borough of Brooklyn.</p>" +
+      "</div>",
     ],
     [
       '<div class="info_content">' +
-        "<h3>Brooklyn Public Library</h3>" +
-        "<p>The Brooklyn Public Library (BPL) is the public library system of the borough of Brooklyn, in New York City.</p>" +
-        "</div>",
+      "<h3>Brooklyn Public Library</h3>" +
+      "<p>The Brooklyn Public Library (BPL) is the public library system of the borough of Brooklyn, in New York City.</p>" +
+      "</div>",
     ],
     [
       '<div class="info_content">' +
-        "<h3>Prospect Park Zoo</h3>" +
-        "<p>The Prospect Park Zoo is a 12-acre (4.9 ha) zoo located off Flatbush Avenue on the eastern side of Prospect Park, Brooklyn, New York City.</p>" +
-        "</div>",
+      "<h3>Prospect Park Zoo</h3>" +
+      "<p>The Prospect Park Zoo is a 12-acre (4.9 ha) zoo located off Flatbush Avenue on the eastern side of Prospect Park, Brooklyn, New York City.</p>" +
+      "</div>",
     ],
   ];
 

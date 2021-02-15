@@ -9,30 +9,26 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Animaciones -->
-    <link id="lib-anim" rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link id="lib-anim" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Alertas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- CSS Principal -->
-    <link rel="stylesheet" href="./css/main.css?ver=1.0.12">
+    <link rel="stylesheet" href="./css/main.css?ver=1.0.13">
 
     <!-- Google Map -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhpy_QS2Idi5MsBff1UDtlhQysstePASE&callback=initMap&libraries=&v=weekly"
-        defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhpy_QS2Idi5MsBff1UDtlhQysstePASE&callback=initMap&libraries=&v=weekly" defer></script>
 
     <!-- Mostrar mapa -->
-    <script src="./js/map.js?ver=1.0.12"></script>
+    <script src="./js/map.js?ver=1.0.13"></script>
 
     <!-- Sidebar -->
-    <link href="./css/simple-sidebar.css?ver=1.0.12" rel="stylesheet">
+    <link href="./css/simple-sidebar.css?ver=1.0.13" rel="stylesheet">
 
 </head>
 
@@ -42,28 +38,26 @@
         <div class="border-right" id="sidebar-wrapper">
             <div class="row">
                 <div class="col-12 text-center mt-3">
-                    <a href="./index.html"> <img class="img-fluid" src="./img/logo-blanco-cemefi.png" alt="logo cemefi"
-                            width="40%"></a>
+                    <a href="./index.html"> <img class="img-fluid" src="./img/logo-blanco-cemefi.png" alt="logo cemefi" width="40%"></a>
                 </div>
                 <div class="col-12 espacio-100"></div>
             </div>
             <div class="list-group list-group-flush">
                 <div class="row">
                     <div class="col-12">
-                        <a href="informacion_organizacion.html"
-                            class="list-group-item list-group-item-action text-white"><i
-                                class="fas fa-pencil-alt texto-icon-sidebar"></i>
-                            <span class="border-b-w texto-sidebar">Editar registro de la organización</span></a>
+                        <a href="informacion_organizacion.html" class="list-group-item list-group-item-action text-white"><i
+                                    class="fas fa-pencil-alt texto-icon-sidebar"></i>
+                                <span class="border-b-w texto-sidebar">Editar registro de la organización</span></a>
                     </div>
                     <div class="col-12 mt-4">
                         <a href="estadisticas.html" class="list-group-item list-group-item-action text-white"><i
-                                class="far fa-chart-bar texto-icon-sidebar"></i>
-                            <span class="border-b-w texto-sidebar">Estadísticas</span></a>
+                                    class="far fa-chart-bar texto-icon-sidebar"></i>
+                                <span class="border-b-w texto-sidebar">Estadísticas</span></a>
                     </div>
                     <div class="col-12 mt-4">
                         <a href="#" class="list-group-item list-group-item-action text-white"><i
-                                class="fas fa-search texto-icon-sidebar"></i>
-                            <span class="border-b-w texto-sidebar">Buscador</span></a>
+                                    class="fas fa-search texto-icon-sidebar"></i>
+                                <span class="border-b-w texto-sidebar">Buscador</span></a>
                     </div>
                     <div class="col-12 mt-4">
                         <a href="" class="list-group-item list-group-item-action text-white" id="close-menu">
@@ -75,11 +69,10 @@
         </div>
         <!-- /#sidebar-wrapper -->
         <div id="page-content-wrapper">
-            <header id="header" class="container-fluid ">
-                <div class="container">
+            <header id="header" class="container-fluid">
+                <div class="container-fluid centrar-f menu-mobile">
                     <nav class="navbar navbar-expand-lg navbar-light ">
-                        <a class="navbar-brand" href="./index.html"><img src="./img/logocemefi.png" alt="logo cemefi"
-                                width="130px"></a>
+                        <a class="navbar-brand" href="./index.html"><img src="./img/logocemefi.png" alt="logo cemefi" width="130px"></a>
                         <a class="navbar-toggler" id="menu-toggle">
                             <span class="navbar-toggler-icon"></span>
                         </a>
@@ -87,6 +80,10 @@
                             <ul class="navbar-nav ">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link pointer" data-toggle="modal" data-target="#modalDirectorio">¿Qué es
+                                            el Directorio?</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="registro.html">Registro</a>
@@ -102,13 +99,12 @@
                                 <div class="box">
                                     <div class="container-1">
                                         <span class="icon"><i class="fa fa-search"></i></span>
-                                        <input class="outline" type="search" id="search"
-                                            placeholder="Inserte alguna palabra o frase que desee buscar en los campos" />
+                                        <input class="outline" type="search" id="search" placeholder="Inserte alguna palabra o frase que desee buscar en los campos" />
                                     </div>
                                 </div>
                             </form>
                             <a href="contacto.html" class="btn btn-orange ml-2 btn-contacto"><i
-                                    class="far fa-envelope"></i></a>
+                                        class="far fa-envelope"></i></a>
                         </div>
                     </nav>
                 </div>
@@ -116,55 +112,43 @@
             <div class="container mt-5">
                 <h1 class="text-center animate__animated animate__fadeInDown">Directorio de Instituciones Filantrópicas
                 </h1>
-                <p class="text-center texto-gris font-15 op-7 animate__animated animate__fadeInLeft">Llene los campos
-                    con la información que conozca de la
-                    organización que desea buscar</p>
-                <h6 class="text-center animate__animated animate__fadeInRight"><i
-                        class="fas fa-chart-line texto-naranja"></i> <b class="op-7">ORGANIZACIONES
-                        DE LA
-                        SOCIEDAD CIVIL REGISTRADAS EN MÉXICO: 45,817</b></h6>
+                <h6 class="text-center animate__animated animate__fadeInRight"><i class="fas fa-chart-line texto-naranja"></i> <b class="op-7">ORGANIZACIONES
+                            DE LA
+                            SOCIEDAD CIVIL REGISTRADAS EN MÉXICO:</b> <span class="texto-naranja font-weight-bold">45,817</span></h6>
+                <p class="text-center texto-gris font-15 op-7 animate__animated animate__fadeInLeft">Llene alguno de los campos con la información que desea buscar.</p>
                 <div class="contenedor-busqueda mt-5 pl-5 pr-5 pt-4 pb-3 animate__animated animate__fadeInUp">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-lg-3 col-md-4 border-r">
                                 <label for="inputEmail4" class="font-weight-bold op-9">Nombre</label>
-                                <input type="text" class="form-control-busqueda" id="inputEmail4"
-                                    placeholder="Nombre de la organización">
+                                <input type="text" class="form-control-busqueda" id="inputEmail4" placeholder="Nombre de la organización">
                             </div>
                             <div class="form-group col-lg-3 col-md-4 border-r">
                                 <label for="inputPassword4" class="font-weight-bold op-9">RFC</label>
-                                <input type="text" class="form-control-busqueda" id="inputPassword4"
-                                    placeholder="Registro Federal del Contribuyente">
+                                <input type="text" class="form-control-busqueda" id="inputPassword4" placeholder="Registro Federal del Contribuyente">
                             </div>
                             <div class="form-group col-lg-2 col-md-4 border-r">
                                 <label for="inputPassword4" class="font-weight-bold op-9">Ubicación</label>
-                                <input type="text" class="form-control-busqueda" id="inputPassword4"
-                                    placeholder="Edo., Alcaldía o Mpio.">
+                                <input type="text" class="form-control-busqueda" id="inputPassword4" placeholder="Edo., Alcaldía o Mpio.">
                             </div>
                             <div class="form-group col-lg-3 col-md-4">
                                 <label for="inputPassword4" class="font-weight-bold op-9">Más criterios</label>
-                                <input type="text" class="form-control-busqueda" id="inputPassword4"
-                                    placeholder="Más criterios de búsqueda">
+                                <input type="text" class="form-control-busqueda" id="inputPassword4" placeholder="Búsqueda avanzada">
                             </div>
                             <div class="contenedor-search">
-                                <a id="abrirModal" type="button" class="btn-search btn-search-blanco ml-2"
-                                    data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></a>
+                                <a id="abrirModal" type="button" class="btn-search btn-search-blanco ml-2" data-toggle="modal" data-target="#exampleModal"><i
+                                            class="fas fa-search"></i></a>
                             </div>
                         </div>
                     </form>
-                    <div class="modal fade animate__animated animate__fadeInRight" id="exampleModal" tabindex="-1"
-                        role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade animate__animated animate__fadeInRight" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content modal-content-search">
                                 <div class="modal-header modal-header-search">
-                                    <button type="button" class="close close-search" data-dismiss="modal"
-                                        aria-label="Close">
-                                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                    </button>
-                                    <h5 class="modal-title text-center centrar font-weight-bold op-9"
-                                        id="exampleModalLabel">Más
-                                        criterios
-                                        de búsqueda</h5>
+                                    <button type="button" class="close close-search" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                        </button>
+                                    <h5 class="modal-title text-center centrar font-weight-bold op-9" id="exampleModalLabel">Más criterios de búsqueda</h5>
                                 </div>
                                 <div class="modal-body">
                                     <div class="container">
@@ -175,23 +159,32 @@
                                                     <input type="text" class="form-control-modal" placeholder="">
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="font-weight-bold op-9">Figura jurídica</label>
+                                                    <label for="" class="font-weight-bold op-9">Figura
+                                                            jurídica</label>
                                                     <select class="form-control-modal">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="font-weight-bold op-9">Naturaleza de la
-                                                        institución</label>
+                                                            institución</label>
                                                     <select class="form-control-modal">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="font-weight-bold op-9">Tipo de donante</label>
+                                                    <label for="" class="font-weight-bold op-9">Tipo de
+                                                            donante</label>
                                                     <select class="form-control-modal">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                                                    <label for="" class="font-weight-bold op-9">Código
+                                                            postal</label>
+                                                    <input type="text" class="form-control-modal">
+                                                    <option></option>
+
                                                 </div>
                                             </div>
                                             <div class="form-row">
@@ -204,49 +197,49 @@
                                                     <div class="box-check">
                                                         <input id="check1" type="checkbox" checked>
                                                         <span class="check"></span>
-                                                        <label for="check1"
-                                                            class="op-9 font-15 font-weight-light ml-2">Forma
-                                                            parte
-                                                            del<br> Cemefi: Socio</label>
+                                                        <label for="check1" class="op-9 font-15 font-weight-light ml-2">Es miembro
+                                                                de
+                                                                Cemefi</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <div class="box-check">
                                                         <input id="check2" type="checkbox">
                                                         <span class="check"></span>
-                                                        <label for="check2"
-                                                            class="op-9 font-15 font-weight-light ml-2">Forma
-                                                            parte
-                                                            del<br> Cemefi: Afiliado</label>
+                                                        <label for="check2" class="op-9 font-15 font-weight-light ml-2">Socio</label>
                                                     </div>
                                                 </div>
-
+                                                <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+                                                    <div class="box-check">
+                                                        <input id="checkA" type="checkbox">
+                                                        <span class="check"></span>
+                                                        <label for="checkA" class="op-9 font-15 font-weight-light ml-2">Afiliado</label>
+                                                    </div>
+                                                </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <div class="box-check">
                                                         <input id="check4" type="checkbox">
                                                         <span class="check"></span>
-                                                        <label for="check4"
-                                                            class="op-9 font-15 font-weight-light ml-2">Donataria
-                                                            autorizada</label>
+                                                        <label for="check4" class="op-9 font-15 font-weight-light ml-2">Donataria
+                                                                autorizada</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <div class="box-check">
                                                         <input id="check5" type="checkbox">
                                                         <span class="check"></span>
-                                                        <label for="check5"
-                                                            class="op-9 font-15 font-weight-light ml-2">Cuenta
-                                                            con
-                                                            Cluni</label>
+                                                        <label for="check5" class="op-9 font-15 font-weight-light ml-2">Cuenta
+                                                                con
+                                                                Cluni</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <div class="box-check">
                                                         <input id="check6" type="checkbox">
                                                         <span class="check"></span>
-                                                        <label for="check6"
-                                                            class="op-9 font-15 font-weight-light ml-2">Acreditación en
-                                                            Institucionalidad <br>y Transparencia (AIT)</label>
+                                                        <label for="check6" class="op-9 font-15 font-weight-light ml-2">Acreditación
+                                                                en
+                                                                Institucionalidad <br>y Transparencia (AIT)</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -261,74 +254,77 @@
                                             <div class="form-row separacion-80">
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">1.-Arte y
-                                                        cultura</label>
+                                                            cultura</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">2.-Asistencia social y
-                                                        atención a desastres</label>
+                                                    <label for="" class="altura-40 font-12 op-9">2.-Asistencia
+                                                            social y
+                                                            atención a desastres</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">3.-Deporte y
-                                                        recreación</label>
+                                                            recreación</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">4.- Derechos humanos y
-                                                        civiles</label>
+                                                    <label for="" class="altura-40 font-12 op-9">4.- Derechos
+                                                            humanos y
+                                                            civiles</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">5.-Desarrollo social y
-                                                        económico</label>
+                                                    <label for="" class="altura-40 font-12 op-9">5.-Desarrollo
+                                                            social y
+                                                            económico</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">6.-Educación</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">7.-Filantropia y
-                                                        voluntariado</label>
+                                                            voluntariado</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">8.-
-                                                        Investigación</label>
+                                                            Investigación</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                                                    <label for="" class="altura-40 font-12 op-9">9.- Medio ambiente y
-                                                        protección civil</label>
+                                                    <label for="" class="altura-40 font-12 op-9">9.- Medio ambiente
+                                                            y
+                                                            protección civil</label>
                                                     <select class="form-control-modal-sm">
-                                                        <option></option>
-                                                    </select>
+                                                            <option></option>
+                                                        </select>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="resultados_busqueda.html" type="button"
-                                        class="btn btn-search-orange text-white op-9">Mostrar
-                                        resultados</a>
+                                    <a href="resultados_busqueda.html" type="button" class="btn btn-search-orange text-white op-9">Mostrar
+                                            resultados</a>
                                 </div>
                             </div>
                         </div>
@@ -336,11 +332,8 @@
 
                 </div>
                 <div class="espacio-50"></div>
-                <p class="mt-5 text-center font-12 op-7 mr-5 animate__animated animate__fadeInUp">Si su organización no
-                    aparece en este directorio, le
-                    invitamos a
-                    llenar su pre-registro . Si tiene problemas para ingresar comuníquese con Julio Casas al teléfono
-                    5552768530, extensión 151 o envíe un correo a: directorios@cemefi.org.</p>
+                <p class="mt-5 text-center font-12 op-7 mr-5 animate__animated animate__fadeInUp">Si su organización no aparece en este directorio, le invitamos a llenar su <a href="./registro.html">pre-registro</a> . Si tiene problemas para ingresar comuníquese con Julio Casas al teléfono 5552768530, extensión 151 o envíe un correo
+                    a: <a href="mailto:directorios@cemefi.org">directorios@cemefi.org</a>.</p>
             </div>
             <footer class="mt-5">
                 <div class="caja">
@@ -356,21 +349,44 @@
             </footer>
         </div>
     </div>
+
+    <!-- Modal que es el directorio -->
+    <div class="modal fade" id="modalDirectorio" tabindex="-1" aria-labelledby="modalDirectorioLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDirectorioLabel">¿Qué es el Directorio?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-justify">Entendemos por instituciones filantrópicas a aquellas organizaciones de beneficencia o ayuda a terceros que se caracterizan por estar legalmente constituidas, ser privadas y autogobernadas, que no distribuyen remanentes y no hacen
+                        proselitismo religioso ni partidista. Pueden dedicarse a cualquier causa siempre y cuando realicen actividades dentro de la ley. Entre sus funciones sociales, están el aporte de servicios a la comunidad, la promoción de la participación
+                        ciudadana, fungen como laboratorios sociales, promueven el cambio y actúan como contrapeso del poder.</p>
+                    <p class="text-justify">
+                        De esta forma, el Directorio de Instituciones Filantrópicas, nace en 1990, para convertirse en la herramienta más importante, confiable y completa que visibiliza los datos de las organizaciones de la sociedad civil en México.
+                    </p>
+                    <p class="text-justify">
+                        La información que concentra es actualizada frecuentemente y permite promover el acercamiento de este sector con entidades donantes, empresas socialmente responsables, gobierno y otros públicos interesados en la labor social.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <!-- JS boostrap -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+</script>
 
 <!-- Menu Toggle Script -->
-<script src="./js/sidebar.js?ver=1.0.12"></script>
+<script src="./js/sidebar.js?ver=1.0.13"></script>
 
 <!-- Validar formularios -->
-<script src="./js/validarFormularios.js?ver=1.0.12"></script>
+<script src="./js/validarFormularios.js?ver=1.0.13"></script>
 
 
 

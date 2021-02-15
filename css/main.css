@@ -767,11 +767,11 @@
             flex-direction: column;
             min-width: 0;
             word-wrap: break-word;
-            background-image: url("../img/login.jpg");
+            background-image: url("../img/login.png");
             background-clip: border-box;
             border: 1px solid rgba(0, 0, 0, .125);
             border-radius: .25rem;
-            height: 600px;
+            height: 650px;
             width: 100%;
             background-repeat: no-repeat;
             background-attachment: inherit;
@@ -1265,6 +1265,10 @@
             margin-bottom: -30px;
         }
         
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        
         .mb-i-120 {
             margin-bottom: -120px;
         }
@@ -1347,6 +1351,10 @@
             background-color: #707070;
             color: #fff;
         }
+        
+        .bg-gris-claro {
+            background-color: var(--gris);
+        }
         /* Input search */
         
         .container-1 {
@@ -1398,6 +1406,42 @@
         }
         /* Mobile */
         
+        @media (max-width: 1284px) {
+            .container-1 {
+                width: 350px;
+            }
+            .container-1 input#search {
+                width: 350px;
+            }
+        }
+        
+        @media (max-width: 1184px) {
+            .container-1 {
+                width: 250px;
+            }
+            .container-1 input#search {
+                width: 250px;
+            }
+        }
+        
+        @media (max-width: 1093px) {
+            .container-1 {
+                width: 200px;
+            }
+            .container-1 input#search {
+                width: 200px;
+            }
+        }
+        
+        @media (max-width: 1045px) {
+            .container-1 {
+                width: 150px;
+            }
+            .container-1 input#search {
+                width: 150px;
+            }
+        }
+        
         @media (max-width: 1025px) {
             .texto-footer1 {
                 top: 70px;
@@ -1423,6 +1467,9 @@
         }
         
         @media (max-width: 992px) {
+            .menu-mobile {
+                display: flow-root;
+            }
             #header nav ul li.active a:after {
                 position: absolute;
                 bottom: 20px;
