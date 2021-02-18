@@ -18,17 +18,17 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- CSS Principal -->
-    <link rel="stylesheet" href="./css/main.css?ver=1.0.13">
+    <link rel="stylesheet" href="./css/main.css?ver=1.0.14">
 
     <!-- Google Map -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhpy_QS2Idi5MsBff1UDtlhQysstePASE&callback=initMap&libraries=&v=weekly" defer></script>
 
     <!-- Mostrar mapa -->
-    <script src="./js/map.js?ver=1.0.13"></script>
+    <script src="./js/map.js?ver=1.0.14"></script>
 
     <!-- Sidebar -->
-    <link href="./css/simple-sidebar.css?ver=1.0.13" rel="stylesheet">
+    <link href="./css/simple-sidebar.css?ver=1.0.14" rel="stylesheet">
 
 </head>
 
@@ -46,18 +46,18 @@
                 <div class="row">
                     <div class="col-12">
                         <a href="informacion_organizacion.html" class="list-group-item list-group-item-action text-white"><i
-                                    class="fas fa-pencil-alt texto-icon-sidebar"></i>
-                                <span class="border-b-w texto-sidebar">Editar registro de la organización</span></a>
+                  class="fas fa-pencil-alt texto-icon-sidebar"></i>
+                <span class="border-b-w texto-sidebar">Editar registro de la organización</span></a>
                     </div>
                     <div class="col-12 mt-4">
                         <a href="estadisticas.html" class="list-group-item list-group-item-action text-white"><i
-                                    class="far fa-chart-bar texto-icon-sidebar"></i>
-                                <span class="border-b-w texto-sidebar">Estadísticas</span></a>
+                  class="far fa-chart-bar texto-icon-sidebar"></i>
+                <span class="border-b-w texto-sidebar">Estadísticas</span></a>
                     </div>
                     <div class="col-12 mt-4">
                         <a href="#" class="list-group-item list-group-item-action text-white"><i
-                                    class="fas fa-search texto-icon-sidebar"></i>
-                                <span class="border-b-w texto-sidebar">Buscador</span></a>
+                  class="fas fa-search texto-icon-sidebar"></i>
+                <span class="border-b-w texto-sidebar">Buscador</span></a>
                     </div>
                     <div class="col-12 mt-4">
                         <a href="" class="list-group-item list-group-item-action text-white" id="close-menu">
@@ -83,7 +83,7 @@
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link pointer" data-toggle="modal" data-target="#modalDirectorio">¿Qué es
-                                            el Directorio?</a>
+                      el Directorio?</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="registro.html">Registro</a>
@@ -103,41 +103,65 @@
                                     </div>
                                 </div>
                             </form>
-                            <a href="contacto.html" class="btn btn-orange ml-2 btn-contacto"><i
-                                        class="far fa-envelope"></i></a>
+                            <a href="contacto.html" class="btn btn-orange ml-2 btn-contacto"><i class="far fa-envelope"></i></a>
                         </div>
                     </nav>
                 </div>
             </header>
-            <div class="container mt-5">
+            <div class="container mt-5 w-90">
                 <h1 class="text-center animate__animated animate__fadeInDown">Directorio de Instituciones Filantrópicas
                 </h1>
-                <h6 class="text-center animate__animated animate__fadeInRight"><i class="fas fa-chart-line texto-naranja"></i> <b class="op-7">ORGANIZACIONES
-                            DE LA
-                            SOCIEDAD CIVIL REGISTRADAS EN MÉXICO:</b> <span class="texto-naranja font-weight-bold">45,817</span></h6>
+                <h6 class="text-center animate__animated animate__fadeInRight"><i class="fas fa-chart-line texto-naranja"></i>
+                    <b class="op-7">ORGANIZACIONES
+              DE LA
+              SOCIEDAD CIVIL REGISTRADAS EN MÉXICO:</b> <span class="texto-naranja font-weight-bold">45,817</span></h6>
                 <p class="text-center texto-gris font-15 op-7 animate__animated animate__fadeInLeft">Llene alguno de los campos con la información que desea buscar.</p>
                 <div class="contenedor-busqueda mt-5 pl-5 pr-5 pt-4 pb-3 animate__animated animate__fadeInUp">
                     <form>
                         <div class="form-row">
-                            <div class="form-group col-lg-3 col-md-4 border-r">
-                                <label for="inputEmail4" class="font-weight-bold op-9">Nombre</label>
-                                <input type="text" class="form-control-busqueda" id="inputEmail4" placeholder="Nombre de la organización">
-                            </div>
-                            <div class="form-group col-lg-3 col-md-4 border-r">
-                                <label for="inputPassword4" class="font-weight-bold op-9">RFC</label>
-                                <input type="text" class="form-control-busqueda" id="inputPassword4" placeholder="Registro Federal del Contribuyente">
+                            <div class="form-group col-lg-2 col-md-4 border-r">
+                                <label for="inputEmail4" class="font-weight-bold op-9 font-14">Nombre</label>
+                                <input type="text" class="form-control-busqueda-inicio" id="inputEmail4" placeholder="Nombre de la organización">
                             </div>
                             <div class="form-group col-lg-2 col-md-4 border-r">
-                                <label for="inputPassword4" class="font-weight-bold op-9">Ubicación</label>
-                                <input type="text" class="form-control-busqueda" id="inputPassword4" placeholder="Edo., Alcaldía o Mpio.">
+                                <label for="inputPassword4" class="font-weight-bold op-9 font-14">RFC</label>
+                                <input type="text" class="form-control-busqueda-inicio" id="inputPassword4" placeholder="Registro Federal del Contribuyente">
                             </div>
-                            <div class="form-group col-lg-3 col-md-4">
+                            <div class="form-group col-lg-2 col-md-4 border-r">
+                                <label for="inputPassword4" class="font-weight-bold op-9 font-14">Ubicación</label>
+                                <input type="text" class="form-control-busqueda-inicio" id="inputPassword4" placeholder="Edo., Alcaldía o Mpio.">
+                            </div>
+                            <div class="form-group col-lg-1 col-md-4 border-r">
+                                <label for="codePostal" class="font-weight-bold op-9 font-14">C.P</label>
+                                <input type="text" class="form-control-busqueda-inicio" id="codePostal" placeholder="58140">
+                            </div>
+                            <div class="form-group col-lg-2 col-md-4 border-r">
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label font-10" for="defaultCheck1">
+                      Forma parte de cemefi
+                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                    <label class="form-check-label font-10" for="defaultCheck2">
+                      Socio
+                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                    <label class="form-check-label font-10" for="defaultCheck3">
+                      Asociado
+                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-2 col-md-4">
                                 <label for="inputPassword4" class="font-weight-bold op-9">Más criterios</label>
-                                <input type="text" class="form-control-busqueda" id="inputPassword4" placeholder="Búsqueda avanzada">
+                                <input type="text" class="form-control-busqueda-inicio" id="inputPassword4" placeholder="Búsqueda avanzada">
                             </div>
                             <div class="contenedor-search">
-                                <a id="abrirModal" type="button" class="btn-search btn-search-blanco ml-2" data-toggle="modal" data-target="#exampleModal"><i
-                                            class="fas fa-search"></i></a>
+                                <a id="abrirModal" type="button" class="btn-search btn-search-blanco font-20" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></a>
                             </div>
                         </div>
                     </form>
@@ -146,8 +170,8 @@
                             <div class="modal-content modal-content-search">
                                 <div class="modal-header modal-header-search">
                                     <button type="button" class="close close-search" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                        </button>
+                      <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
                                     <h5 class="modal-title text-center centrar font-weight-bold op-9" id="exampleModalLabel">Más criterios de búsqueda</h5>
                                 </div>
                                 <div class="modal-body">
@@ -160,28 +184,28 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="font-weight-bold op-9">Figura
-                                                            jurídica</label>
+                              jurídica</label>
                                                     <select class="form-control-modal">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="font-weight-bold op-9">Naturaleza de la
-                                                            institución</label>
+                              institución</label>
                                                     <select class="form-control-modal">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="font-weight-bold op-9">Tipo de
-                                                            donante</label>
+                              donante</label>
                                                     <select class="form-control-modal">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="font-weight-bold op-9">Código
-                                                            postal</label>
+                              postal</label>
                                                     <input type="text" class="form-control-modal">
                                                     <option></option>
 
@@ -198,8 +222,8 @@
                                                         <input id="check1" type="checkbox" checked>
                                                         <span class="check"></span>
                                                         <label for="check1" class="op-9 font-15 font-weight-light ml-2">Es miembro
-                                                                de
-                                                                Cemefi</label>
+                                de
+                                Cemefi</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
@@ -221,7 +245,7 @@
                                                         <input id="check4" type="checkbox">
                                                         <span class="check"></span>
                                                         <label for="check4" class="op-9 font-15 font-weight-light ml-2">Donataria
-                                                                autorizada</label>
+                                autorizada</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
@@ -229,8 +253,8 @@
                                                         <input id="check5" type="checkbox">
                                                         <span class="check"></span>
                                                         <label for="check5" class="op-9 font-15 font-weight-light ml-2">Cuenta
-                                                                con
-                                                                Cluni</label>
+                                con
+                                Cluni</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
@@ -238,8 +262,8 @@
                                                         <input id="check6" type="checkbox">
                                                         <span class="check"></span>
                                                         <label for="check6" class="op-9 font-15 font-weight-light ml-2">Acreditación
-                                                                en
-                                                                Institucionalidad <br>y Transparencia (AIT)</label>
+                                en
+                                Institucionalidad <br>y Transparencia (AIT)</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -254,69 +278,69 @@
                                             <div class="form-row separacion-80">
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">1.-Arte y
-                                                            cultura</label>
+                              cultura</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">2.-Asistencia
-                                                            social y
-                                                            atención a desastres</label>
+                              social y
+                              atención a desastres</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">3.-Deporte y
-                                                            recreación</label>
+                              recreación</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">4.- Derechos
-                                                            humanos y
-                                                            civiles</label>
+                              humanos y
+                              civiles</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">5.-Desarrollo
-                                                            social y
-                                                            económico</label>
+                              social y
+                              económico</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">6.-Educación</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">7.-Filantropia y
-                                                            voluntariado</label>
+                              voluntariado</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">8.-
-                                                            Investigación</label>
+                              Investigación</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                                                     <label for="" class="altura-40 font-12 op-9">9.- Medio ambiente
-                                                            y
-                                                            protección civil</label>
+                              y
+                              protección civil</label>
                                                     <select class="form-control-modal-sm">
-                                                            <option></option>
-                                                        </select>
+                              <option></option>
+                            </select>
                                                 </div>
                                             </div>
                                         </form>
@@ -324,7 +348,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <a href="resultados_busqueda.html" type="button" class="btn btn-search-orange text-white op-9">Mostrar
-                                            resultados</a>
+                      resultados</a>
                                 </div>
                             </div>
                         </div>
@@ -357,8 +381,8 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalDirectorioLabel">¿Qué es el Directorio?</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+              <span aria-hidden="true">&times;</span>
+            </button>
                 </div>
                 <div class="modal-body">
                     <p class="text-justify">Entendemos por instituciones filantrópicas a aquellas organizaciones de beneficencia o ayuda a terceros que se caracterizan por estar legalmente constituidas, ser privadas y autogobernadas, que no distribuyen remanentes y no hacen
@@ -383,10 +407,10 @@
 </script>
 
 <!-- Menu Toggle Script -->
-<script src="./js/sidebar.js?ver=1.0.13"></script>
+<script src="./js/sidebar.js?ver=1.0.14"></script>
 
 <!-- Validar formularios -->
-<script src="./js/validarFormularios.js?ver=1.0.13"></script>
+<script src="./js/validarFormularios.js?ver=1.0.14"></script>
 
 
 
