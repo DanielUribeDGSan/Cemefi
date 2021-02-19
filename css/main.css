@@ -1605,6 +1605,9 @@
         }
         
         @media (max-width: 751px) {
+            .pregunta-login {
+                font-size: 1.30rem !important;
+            }
             .modal-content-search {
                 height: 450px;
             }
@@ -1668,6 +1671,12 @@
             }
             .card-login {
                 height: 400px;
+            }
+            .card-login>.overlay {
+                height: 400px;
+                margin-top: 0px;
+                margin-left: 25px;
+                width: 330px;
             }
             .modal-lg-login {
                 width: 100%;
